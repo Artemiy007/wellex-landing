@@ -106,7 +106,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 </nav>
 
 <section id="hero">
-  <div class="h-eyebrow">От 12% до 240% годовых</div>
+  <div class="h-eyebrow">Ежемесячный доход в USDT</div>
   <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
   <p class="h-sub">Браслет отслеживает здоровье — чем лучше состояние, тем выше доход.</p>
   <div class="h-btns">
@@ -130,8 +130,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 
 <div style="background:#120F22;border-top:1px solid rgba(123,108,231,0.1);border-bottom:1px solid rgba(123,108,231,0.1);padding:20px 40px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap">
   <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">$49</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Разовый вход</div></div>
-  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#4ADE80">от 12%</div><div style="font-size:12px;color:#5A5472;margin-top:2px">до 240% годовых</div></div>
-  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">USDT</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Цифровые доллары</div></div>
+  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#4ADE80">USDT</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Цифровые доллары</div></div>
+  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">14 дней</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Без зарядки</div></div>
   <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">День 1</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Первые начисления</div></div>
 </div>
 
@@ -229,11 +229,11 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="calc-nums">
         <div class="calc-num">
           <div class="calc-num-v" id="res-mo">—</div>
-          <div class="calc-num-l">В месяц</div>
+          <div class="calc-num-l">Ставка</div>
         </div>
         <div class="calc-num">
           <div class="calc-num-v" id="res-yr">—</div>
-          <div class="calc-num-l">В год</div>
+          <div class="calc-num-l">Потенциал</div>
         </div>
       </div>
       <p class="calc-tip" id="res-tip"></p>
@@ -257,8 +257,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         <div class="pi">Браслет Wellex</div>
         <div class="pi">2 месяца подписки</div>
         <div class="pi">Умный анализ 24/7</div>
-        <div class="pi">Ежемесячный доход в USDT</div>
-        <div class="pi">От 12% до 240% годовых</div>
+        <div class="pi">Ежемесячные начисления в USDT</div>
+        <div class="pi">Доход зависит от вашего WVI</div>
       </div>
       <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать</button>
     </div>
@@ -300,20 +300,20 @@ function showResult() {
   var wvi, mo, yr, tip;
 
   if (score <= 4) {
-    wvi = '20–35'; mo = '1–2%'; yr = '12–24%';
-    tip = 'Даже при минимальном WVI вы уже получаете доход — выше, чем у большинства банковских вкладов. Улучшите сон на 1 час — и ставка вырастет.';
+    wvi = '20–35'; mo = 'низкая'; yr = 'начальный уровень';
+    tip = 'WVI пока низкий — но доход уже идёт. Улучшите сон на 1 час и добавьте немного движения — WVI вырастет, ставка поднимется.';
   } else if (score <= 6) {
-    wvi = '40–55'; mo = '3–5%'; yr = '36–60%';
-    tip = 'Неплохой старт. Добавьте 2 000 шагов в день — WVI вырастет и ставка поднимется до 8% в месяц.';
+    wvi = '40–55'; mo = 'средняя'; yr = 'умеренный доход';
+    tip = 'Средний WVI — хороший старт. Добавьте 2 000 шагов в день и следите за качеством сна: WVI и выплата заметно вырастут.';
   } else if (score <= 8) {
-    wvi = '60–75'; mo = '8–12%'; yr = '96–144%';
-    tip = 'Хорошая база. Поработайте над эмоциональным состоянием и режимом сна — до 16% в месяц вполне реально.';
+    wvi = '60–75'; mo = 'хорошая'; yr = 'выше среднего';
+    tip = 'Хорошие показатели. Поработайте над режимом сна и эмоциональным состоянием — WVI выйдет на следующий уровень.';
   } else if (score <= 10) {
-    wvi = '76–87'; mo = '13–16%'; yr = '156–192%';
-    tip = 'Вы уже в топе. Несколько шагов до максимальной ставки 20% в месяц (240% годовых).';
+    wvi = '76–87'; mo = 'высокая'; yr = 'высокий доход';
+    tip = 'Вы уже в верхней части шкалы. Небольшие улучшения сна и активности — и WVI выйдет на максимум.';
   } else {
-    wvi = '88–100'; mo = '17–20%'; yr = '204–240%';
-    tip = 'Отличные показатели. Вы в зоне максимальной доходности Wellex — до 20% в месяц, 240% годовых.';
+    wvi = '88–100'; mo = 'максимальная'; yr = 'топ-уровень';
+    tip = 'Отличные показатели по всем трём параметрам. Вы в зоне максимальных начислений Wellex.';
   }
 
   document.getElementById('res-wvi').textContent = wvi;
