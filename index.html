@@ -7,9 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0A0814;--s:#1A1528;--t:#EDEAF5;--m:#5A5472;--b:#7B6CE7;--bh:#6B5CE7;--g:#4ADE80}
+:root{--bg:#0A0814;--s:#1A1528;--t:#EDEAF5;--m:#5A5472;--b:#7B6CE7;--bh:#6B5CE7;--g:#4ADE80;--o:#FF8C69}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--t);font-family:'Inter',system-ui,sans-serif;font-weight:400;overflow-x:hidden}
+
+/* NAV */
 nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(123,108,231,0.15);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:52px;z-index:100}
 .logo{font-size:17px;font-weight:600;color:var(--t);letter-spacing:-0.5px}
 .nav-c{display:flex;gap:32px}
@@ -17,64 +19,81 @@ nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate
 .nav-c a:hover{color:var(--t)}
 .nav-btn{background:var(--b);color:#fff;padding:7px 18px;font-size:13px;font-weight:500;border:none;cursor:pointer;font-family:'Inter';border-radius:980px;transition:background 0.2s}
 .nav-btn:hover{background:var(--bh)}
-#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;background:var(--bg)}
-.h-eyebrow{font-size:17px;font-weight:600;color:var(--b);margin-bottom:8px;letter-spacing:-0.2px}
-h1{font-size:clamp(48px,8vw,96px);font-weight:700;line-height:1;letter-spacing:-3px;margin-bottom:24px;color:var(--t)}
-.h-sub{font-size:clamp(19px,2.5vw,28px);font-weight:300;color:var(--m);max-width:640px;margin:0 auto 40px;line-height:1.5;letter-spacing:-0.3px}
-.h-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* HERO — 2-column */
+#hero{min-height:100vh;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:72px;padding:80px;background:var(--bg)}
+.hero-text{flex:1;max-width:540px;text-align:left}
+.hero-right{flex:0 0 auto}
+.h-eyebrow{font-size:15px;font-weight:600;color:var(--b);margin-bottom:10px;letter-spacing:-0.2px}
+h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-3px;margin-bottom:24px;color:var(--t)}
+.h-sub{font-size:clamp(17px,2vw,22px);font-weight:300;color:var(--m);max-width:480px;margin-bottom:40px;line-height:1.5;letter-spacing:-0.3px}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start}
 .btn-blue{background:var(--b);color:#fff;padding:14px 28px;font-size:17px;font-weight:500;border:none;cursor:pointer;font-family:'Inter';border-radius:980px;transition:background 0.2s;letter-spacing:-0.3px}
 .btn-blue:hover{background:var(--bh)}
 .btn-ghost{background:transparent;color:var(--b);padding:14px 28px;font-size:17px;font-weight:500;border:none;cursor:pointer;font-family:'Inter';border-radius:980px;letter-spacing:-0.3px;text-decoration:underline;text-underline-offset:2px}
 .h-disclaimer{margin-top:16px;font-size:12px;color:var(--m)}
-.hero-device{margin:48px auto 0;width:300px;background:linear-gradient(135deg,#1D1D1F,#2D2D2F);border-radius:28px;padding:24px 22px;box-shadow:0 40px 80px rgba(0,0,0,0.15),0 2px 8px rgba(0,0,0,0.1);border:1px solid rgba(255,255,255,0.1)}
-@media(max-width:768px){.hero-device{width:100%;max-width:320px;margin-top:36px}.dev-score{font-size:56px}.dev-ai{font-size:11px}}
-.dev-score-label{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:4px}
-.dev-score{font-size:72px;font-weight:700;color:#fff;line-height:0.85;letter-spacing:-2px;margin-bottom:4px}
-.dev-status{font-size:14px;font-weight:500;color:#34D399;margin-bottom:24px}
-.dev-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
-.dm{background:rgba(255,255,255,0.06);border-radius:12px;padding:14px}
-.dm-l{font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:4px}
-.dm-v{font-size:18px;font-weight:600;color:#fff}
-.dev-ai{background:rgba(0,102,204,0.2);border:1px solid rgba(0,102,204,0.3);border-radius:12px;padding:14px;font-size:12px;color:rgba(255,255,255,0.75);line-height:1.6}
+
+/* HERO DEVICE */
+.hero-device{width:300px;background:linear-gradient(135deg,#1D1D1F,#2D2D2F);border-radius:28px;padding:24px 22px;box-shadow:0 40px 80px rgba(0,0,0,0.4),0 2px 8px rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1)}
+.dev-gauge-wrap{position:relative;width:200px;height:110px;margin:0 auto 4px}
+.dev-gauge-wrap svg{width:200px;height:110px}
+.gauge-track{stroke:rgba(255,255,255,0.08)}
+.gauge-fill{stroke:var(--b);stroke-dasharray:251;stroke-dashoffset:251;animation:arcDraw 1.5s ease-out 0.5s forwards}
+@keyframes arcDraw{to{stroke-dashoffset:33}}
+.dev-score-inner{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.dev-score-label{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
+.dev-score{font-size:56px;font-weight:700;color:#fff;line-height:1;letter-spacing:-2px;animation:glowPulse 2.5s ease-in-out 2s infinite}
+@keyframes glowPulse{0%,100%{text-shadow:0 0 20px rgba(123,108,231,0.2)}50%{text-shadow:0 0 40px rgba(123,108,231,0.6),0 0 80px rgba(123,108,231,0.2)}}
+.dev-status{font-size:13px;font-weight:500;color:#34D399;margin-bottom:20px;text-align:center}
+.dev-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.dm{background:rgba(255,255,255,0.06);border-radius:12px;padding:12px}
+.dm-l{font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:3px}
+.dm-v{font-size:16px;font-weight:600;color:#fff}
+.dev-ai{background:rgba(0,102,204,0.15);border:1px solid rgba(0,102,204,0.25);border-radius:10px;padding:12px;font-size:11px;color:rgba(255,255,255,0.65);line-height:1.6}
+
+/* TRUST STRIP */
+.trust-strip{background:#120F22;border-top:1px solid rgba(123,108,231,0.1);border-bottom:1px solid rgba(123,108,231,0.1);padding:20px 40px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.ts-item{text-align:center}
+.ts-v{font-size:22px;font-weight:700;color:var(--t)}
+.ts-l{font-size:12px;color:var(--m);margin-top:2px}
+
+/* BRIDGE */
+.bridge{padding:72px 40px;background:var(--bg);text-align:center;border-bottom:1px solid rgba(123,108,231,0.08)}
+.bridge-text{font-size:clamp(24px,3.5vw,40px);font-weight:600;letter-spacing:-1px;line-height:1.25;color:var(--t);max-width:700px;margin:0 auto}
+.bridge-text span{color:var(--b)}
+
+/* SECTIONS */
 .section{padding:80px 40px;background:var(--s)}
 .section.white{background:var(--bg)}
 .s-center{text-align:center}
-.s-label{font-size:17px;font-weight:600;color:var(--b);margin-bottom:8px;letter-spacing:-0.2px}
+.s-label{font-size:13px;font-weight:700;color:var(--b);margin-bottom:12px;letter-spacing:3px;text-transform:uppercase}
 .s-h{font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-2px;line-height:1;margin-bottom:16px}
 .s-sub{font-size:19px;font-weight:300;color:var(--m);max-width:600px;margin:0 auto 56px;line-height:1.5}
-.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1100px;margin:0 auto}
-.fc{background:var(--bg);border-radius:20px;padding:40px 32px;transition:transform 0.2s;border:1px solid transparent}
+
+/* FEATURE CARDS */
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto}
+.fc{background:var(--bg);border-radius:20px;padding:40px 32px;transition:transform 0.2s;border:1px solid transparent;border-top-width:3px}
 .fc:hover{transform:translateY(-4px)}
-.fc-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px}
-.fi-p{background:rgba(123,108,231,0.12)}
+.fc.c-sleep{border-top-color:var(--g)}
+.fc.c-act{border-top-color:var(--o)}
+.fc.c-em{border-top-color:var(--b)}
+.fc-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px}
 .fi-g{background:rgba(74,222,128,0.12)}
-.fi-r{background:rgba(239,68,68,0.10)}
-.fi-o{background:rgba(251,191,36,0.10)}
+.fi-o{background:rgba(255,140,105,0.12)}
+.fi-p{background:rgba(123,108,231,0.12)}
 .fc-t{font-size:19px;font-weight:600;margin-bottom:6px;letter-spacing:-0.3px}
-.fc-sub{font-size:11px;font-weight:600;color:var(--b);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase}
+.fc-pct{font-size:11px;font-weight:700;color:var(--b);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase}
 .fc-d{font-size:15px;color:var(--m);line-height:1.6}
-.how-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:1100px;margin:0 auto;background:rgba(123,108,231,0.08);border-radius:20px;overflow:hidden}
+
+/* HOW IT WORKS */
+.how-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:1100px;margin:56px auto 0;background:rgba(123,108,231,0.08);border-radius:20px;overflow:hidden}
 .hs{background:var(--bg);padding:48px 36px}
 .hs-n{font-size:13px;font-weight:600;color:var(--b);margin-bottom:16px;letter-spacing:-0.2px}
 .hs-t{font-size:22px;font-weight:600;margin-bottom:10px;letter-spacing:-0.5px}
 .hs-d{font-size:15px;color:var(--m);line-height:1.6}
-#pricing{background:var(--s);padding:80px 40px}
-.pr-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:48px auto 0}
-.pc{background:var(--bg);border-radius:20px;padding:48px;text-align:center;border:2px solid transparent;transition:border-color 0.3s}
-.pc.m{border-color:var(--b)}
-.pc-l{font-size:13px;font-weight:600;color:var(--m);margin-bottom:16px;letter-spacing:-0.2px}
-.pc-a{font-size:72px;font-weight:700;letter-spacing:-3px;line-height:0.85;margin-bottom:4px}
-.pc.m .pc-a{color:var(--t)}
-.pc-p{font-size:13px;color:var(--m);margin-bottom:28px}
-.pc-ls{text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.pi{display:flex;gap:10px;font-size:15px;color:var(--t)}
-.pi::before{content:'✓';color:var(--b);font-weight:700}
-.pc-btn{width:100%;padding:14px;font-family:'Inter';font-size:17px;font-weight:500;cursor:pointer;border-radius:980px;transition:all 0.2s;letter-spacing:-0.3px;border:none}
-.pc.m .pc-btn{background:var(--b);color:#fff}
-.pc.m .pc-btn:hover{background:var(--bh)}
-.pc:not(.m) .pc-btn{background:rgba(123,108,231,0.12);color:var(--t)}
-footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);padding:24px 40px;display:flex;justify-content:space-between;font-size:12px;color:var(--m)}
-/* Калькулятор */
+
+/* CALCULATOR */
+#calc{padding:80px 40px;background:#0D0B1E;border-top:1px solid rgba(123,108,231,0.1);border-bottom:1px solid rgba(123,108,231,0.1)}
 .calc-wrap{max-width:720px;margin:0 auto}
 .calc-q{margin-bottom:32px}
 .calc-q-label{font-size:15px;font-weight:600;color:var(--t);margin-bottom:14px;display:flex;align-items:center;gap:10px}
@@ -89,84 +108,181 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .calc-wvi-label{font-size:12px;color:var(--m);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px}
 .calc-nums{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
 .calc-num{background:var(--s);border-radius:12px;padding:20px}
-.calc-num-v{font-size:36px;font-weight:700;letter-spacing:-1px;color:var(--g)}
+.calc-num-v{font-size:32px;font-weight:700;letter-spacing:-1px;color:var(--g)}
 .calc-num-l{font-size:12px;color:var(--m);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
 .calc-tip{font-size:14px;color:var(--m);line-height:1.6;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
 .calc-cta{background:var(--b);color:#fff;padding:16px 36px;font-size:17px;font-weight:500;border:none;cursor:pointer;font-family:'Inter';border-radius:980px;transition:background 0.2s;letter-spacing:-0.3px}
 .calc-cta:hover{background:var(--bh)}
-@media(max-width:768px){.fg{grid-template-columns:1fr}.how-g{grid-template-columns:1fr}.pr-g{grid-template-columns:1fr}.calc-opts{grid-template-columns:1fr}.calc-nums{grid-template-columns:1fr}nav{padding:0 20px}.nav-c{display:none}#hero{padding:60px 20px}.section{padding:60px 20px}}
+
+/* PRICING */
+#pricing{background:var(--s);padding:80px 40px}
+.pr-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:48px auto 0}
+.pc{background:var(--bg);border-radius:20px;padding:48px;text-align:center;border:2px solid transparent;transition:border-color 0.3s}
+.pc.m{border-color:var(--b)}
+.pc-l{font-size:13px;font-weight:600;color:var(--m);margin-bottom:16px;letter-spacing:-0.2px}
+.pc-a{font-size:72px;font-weight:700;letter-spacing:-3px;line-height:0.85;margin-bottom:4px}
+.pc.m .pc-a{color:var(--t)}
+.pc-p{font-size:13px;color:var(--m);margin-bottom:28px}
+.pc-ls{text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.pi{display:flex;gap:10px;font-size:15px;color:var(--t)}
+.pi::before{content:'✓';color:var(--b);font-weight:700;flex-shrink:0}
+.pc-btn{width:100%;padding:14px;font-family:'Inter';font-size:17px;font-weight:500;cursor:pointer;border-radius:980px;transition:all 0.2s;letter-spacing:-0.3px;border:none}
+.pc.m .pc-btn{background:var(--b);color:#fff}
+.pc.m .pc-btn:hover{background:var(--bh)}
+.pc:not(.m) .pc-btn{background:rgba(123,108,231,0.12);color:var(--t)}
+.pc-killer{font-size:12px;color:var(--b);margin-top:12px;font-weight:500}
+
+/* ПОСЛЕ ЗАКАЗА */
+#after{padding:80px 40px;background:var(--bg);border-top:1px solid rgba(123,108,231,0.08)}
+.after-g{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:900px;margin:48px auto 0;position:relative}
+.after-g::before{content:'';position:absolute;top:32px;left:16.5%;right:16.5%;height:1px;background:rgba(123,108,231,0.25);z-index:0}
+.after-step{text-align:center;position:relative;z-index:1;padding:0 20px}
+.after-num{width:64px;height:64px;border-radius:50%;background:var(--s);border:2px solid rgba(123,108,231,0.3);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 20px}
+.after-t{font-size:17px;font-weight:600;margin-bottom:8px;letter-spacing:-0.3px}
+.after-d{font-size:14px;color:var(--m);line-height:1.6}
+
+/* FAQ */
+#faq{padding:80px 40px;background:var(--s)}
+.faq-list{max-width:720px;margin:48px auto 0;display:flex;flex-direction:column;gap:12px}
+details{border:1px solid rgba(123,108,231,0.2);border-radius:16px;padding:24px 28px;background:var(--bg);cursor:pointer;transition:border-color 0.2s}
+details:hover{border-color:rgba(123,108,231,0.4)}
+details[open]{border-color:rgba(123,108,231,0.4)}
+summary{font-size:17px;font-weight:600;color:var(--t);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+.faq-icon{font-size:22px;color:var(--b);transition:transform 0.2s;flex-shrink:0;line-height:1}
+details[open] .faq-icon{transform:rotate(45deg)}
+.faq-body{margin-top:16px;font-size:15px;color:var(--m);line-height:1.75;padding-right:36px}
+
+/* FOOTER */
+footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);padding:24px 40px;display:flex;justify-content:space-between;font-size:12px;color:var(--m)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #hero{flex-direction:column;text-align:center;padding:60px 24px;gap:40px;min-height:auto;padding-top:80px}
+  .hero-text{text-align:center;max-width:100%}
+  .h-sub{max-width:100%;margin-left:auto;margin-right:auto}
+  .h-btns{justify-content:center}
+  .hero-right{width:100%;display:flex;justify-content:center}
+  .hero-device{width:100%;max-width:320px}
+  .fg{grid-template-columns:1fr}
+  .how-g{grid-template-columns:1fr}
+  .pr-g{grid-template-columns:1fr}
+  .calc-opts{grid-template-columns:1fr}
+  .calc-nums{grid-template-columns:1fr}
+  .after-g{grid-template-columns:1fr;gap:32px}
+  .after-g::before{display:none}
+  nav{padding:0 20px}
+  .nav-c{display:none}
+  .section{padding:60px 20px}
+  #pricing{padding:60px 20px}
+  #calc{padding:60px 20px}
+  #after{padding:60px 20px}
+  #faq{padding:60px 20px}
+  .bridge{padding:48px 24px}
+  .trust-strip{padding:20px 24px;gap:24px}
+  footer{flex-direction:column;gap:8px;text-align:center}
+}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="logo">Wellex</div>
-  <div class="nav-c"><a href="#f">Как работает</a><a href="#calc">Мой доход</a><a href="#pricing">Цены</a></div>
-  <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
+  <div class="nav-c">
+    <a href="#f">Как работает</a>
+    <a href="#calc">Мой доход</a>
+    <a href="#pricing">Цены</a>
+    <a href="#faq">Вопросы</a>
+  </div>
+  <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
-  <div class="h-eyebrow">Ежемесячный доход в USDT</div>
-  <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
-  <p class="h-sub">Браслет отслеживает здоровье — чем лучше состояние, тем выше доход.</p>
-  <div class="h-btns">
-    <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
-    <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
-  </div>
-  <div class="h-disclaimer">Браслет включён в стоимость · Начисления с первого дня</div>
-  <div class="hero-device">
-    <div class="dev-score-label">Ваш индекс здоровья (WVI)</div>
-    <div class="dev-score">87</div>
-    <div class="dev-status">Отличный день</div>
-    <div class="dev-metrics">
-      <div class="dm"><div class="dm-l">Сон</div><div class="dm-v">92%</div></div>
-      <div class="dm"><div class="dm-l">Активность</div><div class="dm-v">Высокая</div></div>
-      <div class="dm"><div class="dm-l">Эмоции</div><div class="dm-v">Хорошо</div></div>
-      <div class="dm"><div class="dm-l">Доход в мес.</div><div class="dm-v">16%</div></div>
+  <div class="hero-text">
+    <div class="h-eyebrow">Ежемесячный доход в USDT</div>
+    <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
+    <p class="h-sub">Браслет отслеживает здоровье — чем лучше состояние, тем выше доход.</p>
+    <div class="h-btns">
+      <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
+      <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
     </div>
-    <div class="dev-ai">«Сон улучшился на 8%. Нервная система стабильна. Ещё 2 тренировки — WVI достигнет 93 и доходность вырастет до 20%.»</div>
+    <div class="h-disclaimer">Браслет включён в стоимость · Начисления с первого дня</div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-device">
+      <div class="dev-gauge-wrap">
+        <svg width="200" height="110" viewBox="0 0 200 110" fill="none">
+          <path d="M20,100 A80,80 0 0,1 180,100" class="gauge-track" stroke-width="8" stroke-linecap="round"/>
+          <path d="M20,100 A80,80 0 0,1 180,100" class="gauge-fill" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <div class="dev-score-inner">
+          <div class="dev-score-label">WVI</div>
+          <div class="dev-score">87</div>
+        </div>
+      </div>
+      <div class="dev-status">Отличный день</div>
+      <div class="dev-metrics">
+        <div class="dm"><div class="dm-l">Сон</div><div class="dm-v">92%</div></div>
+        <div class="dm"><div class="dm-l">Активность</div><div class="dm-v">Высокая</div></div>
+        <div class="dm"><div class="dm-l">Эмоции</div><div class="dm-v">Хорошо</div></div>
+        <div class="dm"><div class="dm-l">Доход/мес</div><div class="dm-v" style="color:#4ADE80">16%</div></div>
+      </div>
+      <div class="dev-ai">«Сон улучшился на 8%. Нервная система стабильна. Ещё 2 тренировки — WVI достигнет 93 и доходность вырастет до 20%.»</div>
+    </div>
   </div>
 </section>
 
-<div style="background:#120F22;border-top:1px solid rgba(123,108,231,0.1);border-bottom:1px solid rgba(123,108,231,0.1);padding:20px 40px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap">
-  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">$49</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Разовый вход</div></div>
-  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#4ADE80">USDT</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Цифровые доллары</div></div>
-  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">14 дней</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Без зарядки</div></div>
-  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">День 1</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Первые начисления</div></div>
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="ts-item"><div class="ts-v">$49</div><div class="ts-l">Разовый вход</div></div>
+  <div class="ts-item"><div class="ts-v" style="color:#4ADE80">USDT</div><div class="ts-l">Цифровые доллары</div></div>
+  <div class="ts-item"><div class="ts-v">14 дней</div><div class="ts-l">Без зарядки</div></div>
+  <div class="ts-item"><div class="ts-v">День 1</div><div class="ts-l">Первые начисления</div></div>
 </div>
 
+<!-- BRIDGE -->
+<div class="bridge">
+  <div class="bridge-text">Вы уже заботитесь о здоровье.<br><span>Пора зарабатывать на этом.</span></div>
+</div>
+
+<!-- FEATURES -->
 <section class="section" id="f">
   <div class="s-center">
-    <div class="s-label">Как работает WVI</div>
-    <h2 class="s-h">Три показателя.<br>Один индекс.</h2>
+    <div class="s-label">Что считается</div>
+    <h2 class="s-h">Три показателя.<br>Один доход.</h2>
     <p class="s-sub">Браслет считывает три параметра каждый день. Чем они лучше — тем выше ваш WVI и тем выше ежемесячный доход.</p>
   </div>
-  <div class="fg" style="max-width:900px">
-    <div class="fc">
+  <div class="fg">
+    <div class="fc c-sleep">
       <div class="fc-icon fi-g">🌙</div>
-      <div class="fc-t">Качество сна</div>
+      <div class="fc-t">Сон</div>
+      <div class="fc-pct">35% в WVI</div>
       <p class="fc-d">Глубина, продолжительность, фазы восстановления. Браслет знает, насколько хорошо вы отдохнули — точнее, чем вы сами.</p>
     </div>
-    <div class="fc">
-      <div class="fc-icon fi-r">⚡</div>
-      <div class="fc-t">Физическая активность</div>
+    <div class="fc c-act">
+      <div class="fc-icon fi-o">⚡</div>
+      <div class="fc-t">Активность</div>
+      <div class="fc-pct">30% в WVI</div>
       <p class="fc-d">Шаги, тренировки, нагрузка в течение дня. Не усреднённая норма — ваш личный ритм и прогресс.</p>
     </div>
-    <div class="fc">
+    <div class="fc c-em">
       <div class="fc-icon fi-p">💜</div>
-      <div class="fc-t">Эмоциональный фон</div>
-      <p class="fc-d">Уровень стресса и способность организма восстанавливаться после нагрузок. Браслет считывает это автоматически.</p>
+      <div class="fc-t">Эмоции</div>
+      <div class="fc-pct">35% в WVI</div>
+      <p class="fc-d">Уровень стресса и способность организма восстанавливаться. Браслет считывает это автоматически по физиологическим маркерам.</p>
     </div>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="section white" id="h">
   <div class="s-center">
     <div class="s-label">Принцип</div>
-    <h2 class="s-h">Как это<br>работает.</h2>
+    <h2 class="s-h">Как это<br>работает</h2>
     <p class="s-sub" style="margin-bottom:0">От трёх показателей — к реальному доходу.</p>
   </div>
-  <div class="how-g" style="margin-top:56px">
+  <div class="how-g">
     <div class="hs">
       <div class="hs-n">Шаг 1</div>
       <div class="hs-t">Браслет считывает три параметра</div>
@@ -175,7 +291,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="hs">
       <div class="hs-n">Шаг 2</div>
       <div class="hs-t">Рассчитывается ваш WVI</div>
-      <p class="hs-d">WVI — индекс состояния от 0 до 100. Складывается из трёх параметров: качество сна, физическая активность и эмоциональный фон. Обновляется каждое утро.</p>
+      <p class="hs-d">WVI — индекс состояния от 0 до 100. Складывается из трёх параметров: сон, активность и эмоциональный фон. Обновляется каждое утро.</p>
     </div>
     <div class="hs">
       <div class="hs-n">Шаг 3</div>
@@ -185,10 +301,11 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   </div>
 </section>
 
-<section id="calc" style="padding:80px 40px;background:#0D0B1E;border-top:1px solid rgba(123,108,231,0.1);border-bottom:1px solid rgba(123,108,231,0.1)">
+<!-- CALCULATOR -->
+<section id="calc">
   <div class="calc-wrap">
     <div style="text-align:center;margin-bottom:48px">
-      <div style="font-size:11px;font-weight:700;color:var(--b);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px">Калькулятор</div>
+      <div class="s-label">Калькулятор</div>
       <h2 style="font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.05;letter-spacing:-1.5px;margin-bottom:14px;color:var(--t)">Каким будет<br>ваш доход?</h2>
       <p style="font-size:16px;color:var(--m);line-height:1.6">Ответьте на три вопроса — узнайте ваш WVI и ожидаемую доходность.</p>
     </div>
@@ -229,28 +346,29 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="calc-nums">
         <div class="calc-num">
           <div class="calc-num-v" id="res-mo">—</div>
-          <div class="calc-num-l">Ставка</div>
+          <div class="calc-num-l">В месяц</div>
         </div>
         <div class="calc-num">
           <div class="calc-num-v" id="res-yr">—</div>
-          <div class="calc-num-l">Потенциал</div>
+          <div class="calc-num-l">В год</div>
         </div>
       </div>
       <p class="calc-tip" id="res-tip"></p>
-      <button class="calc-cta" onclick="location.href='https://app.wellex.io/join/boart'">Начать зарабатывать — $49</button>
+      <button class="calc-cta" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section id="pricing">
   <div class="s-center">
-    <div class="s-label">Цены</div>
-    <h2 class="s-h">Начать легко.</h2>
+    <div class="s-label">Пакеты</div>
+    <h2 class="s-h">Выберите пакет.</h2>
     <p class="s-sub">Браслет включён. Начисления с первого дня.</p>
   </div>
   <div class="pr-g">
     <div class="pc m">
-      <div class="pc-l">Стартовый пакет</div>
+      <div class="pc-l">Стартовый</div>
       <div class="pc-a">$49</div>
       <div class="pc-p">Разово · Браслет включён</div>
       <div class="pc-ls">
@@ -260,21 +378,78 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         <div class="pi">Ежемесячные начисления в USDT</div>
         <div class="pi">Доход зависит от вашего WVI</div>
       </div>
-      <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать</button>
+      <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет</button>
     </div>
     <div class="pc">
       <div class="pc-l">Партнёр</div>
       <div class="pc-a">$99</div>
-      <div class="pc-p">Разово · Всё из стартового + доход с сети</div>
+      <div class="pc-p">Разово · Всё из стартового + сеть</div>
       <div class="pc-ls">
         <div class="pi">Всё из стартового пакета</div>
         <div class="pi">Доход за каждого привлечённого</div>
-        <div class="pi">Бонусы от команды</div>
+        <div class="pi">Бонусы от активности команды</div>
         <div class="pi">Ранговые вознаграждения</div>
         <div class="pi">Программа лояльности</div>
       </div>
       <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Стать партнёром</button>
+      <div class="pc-killer">Зарабатываете от WVI и от команды</div>
     </div>
+  </div>
+</section>
+
+<!-- ПОСЛЕ ЗАКАЗА -->
+<section id="after">
+  <div class="s-center">
+    <div class="s-label">Что дальше</div>
+    <h2 class="s-h">После заказа</h2>
+    <p class="s-sub" style="margin-bottom:0">Просто три шага.</p>
+  </div>
+  <div class="after-g">
+    <div class="after-step">
+      <div class="after-num">📦</div>
+      <div class="after-t">Получаете браслет</div>
+      <p class="after-d">Отправляем на следующий день. Доставка по всему миру.</p>
+    </div>
+    <div class="after-step">
+      <div class="after-num">⌚</div>
+      <div class="after-t">Надеваете и живёте</div>
+      <p class="after-d">Браслет работает автоматически. Никаких ручных вводов — только жить как обычно.</p>
+    </div>
+    <div class="after-step">
+      <div class="after-num">💰</div>
+      <div class="after-t">Получаете доход</div>
+      <p class="after-d">Начисления в USDT с первого дня. Чем лучше показатели — тем выше ставка.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="s-center">
+    <div class="s-label">Вопросы</div>
+    <h2 class="s-h">Часто спрашивают</h2>
+  </div>
+  <div class="faq-list">
+    <details>
+      <summary>Это МЛМ?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">Нет. Стартовый пакет вообще не требует кого-либо привлекать. Доход идёт от вашего личного WVI — от того, как вы спите, двигаетесь и чувствуете себя. Партнёрская программа — отдельная опция для тех, кто хочет строить команду.</p>
+    </details>
+    <details>
+      <summary>Деньги настоящие?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">Да. USDT — цифровая валюта, жёстко привязанная к доллару США: 1 USDT = $1. Это не «очки» и не внутренние токены. Выводите на карту или криптокошелёк в любое время.</p>
+    </details>
+    <details>
+      <summary>Что если не носить браслет каждый день?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">WVI считается по данным с браслета. Если день пропустили — за этот день данные не поступили, WVI не обновляется, и ставка остаётся по предыдущему значению. Никаких штрафов — просто меньше данных для расчёта.</p>
+    </details>
+    <details>
+      <summary>Нужно разбираться в крипте?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">Нет. Вы видите баланс в личном кабинете в долларах. Wellex хранит и начисляет USDT сам. Вывести можно на банковскую карту — платформа берёт конвертацию на себя.</p>
+    </details>
+    <details>
+      <summary>Что будет после 2 месяцев?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">Подписка продлевается по стандартному тарифу. Доход продолжает начисляться в обычном режиме. Никаких обязательных автоплатежей без вашего ведома — вы сами решаете, продолжать или нет.</p>
+    </details>
   </div>
 </section>
 
@@ -300,19 +475,19 @@ function showResult() {
   var wvi, mo, yr, tip;
 
   if (score <= 4) {
-    wvi = '20–35'; mo = 'низкая'; yr = 'начальный уровень';
+    wvi = '20–35'; mo = '1%'; yr = '12%';
     tip = 'WVI пока низкий — но доход уже идёт. Улучшите сон на 1 час и добавьте немного движения — WVI вырастет, ставка поднимется.';
   } else if (score <= 6) {
-    wvi = '40–55'; mo = 'средняя'; yr = 'умеренный доход';
+    wvi = '40–55'; mo = '2–5%'; yr = '24–60%';
     tip = 'Средний WVI — хороший старт. Добавьте 2 000 шагов в день и следите за качеством сна: WVI и выплата заметно вырастут.';
   } else if (score <= 8) {
-    wvi = '60–75'; mo = 'хорошая'; yr = 'выше среднего';
+    wvi = '60–75'; mo = '8–12%'; yr = '96–144%';
     tip = 'Хорошие показатели. Поработайте над режимом сна и эмоциональным состоянием — WVI выйдет на следующий уровень.';
   } else if (score <= 10) {
-    wvi = '76–87'; mo = 'высокая'; yr = 'высокий доход';
+    wvi = '76–87'; mo = '12–16%'; yr = '144–192%';
     tip = 'Вы уже в верхней части шкалы. Небольшие улучшения сна и активности — и WVI выйдет на максимум.';
   } else {
-    wvi = '88–100'; mo = 'максимальная'; yr = 'топ-уровень';
+    wvi = '88–100'; mo = '16–20%'; yr = '192–240%';
     tip = 'Отличные показатели по всем трём параметрам. Вы в зоне максимальных начислений Wellex.';
   }
 
