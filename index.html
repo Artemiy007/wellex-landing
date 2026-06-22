@@ -181,7 +181,30 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .bridge{padding:48px 24px}
   .trust-strip{padding:20px 24px;gap:24px}
   footer{flex-direction:column;gap:8px;text-align:center}
+  .stats-g{grid-template-columns:1fr 1fr}
+  .compare-wrap{margin:32px 0 0}
 }
+
+/* COMPARE */
+#compare{background:var(--bg)}
+.compare-wrap{max-width:800px;margin:48px auto 0;overflow-x:auto}
+.cmp-table{width:100%;border-collapse:collapse;font-size:14px;min-width:480px}
+.cmp-table th{padding:12px 16px;text-align:center;font-size:11px;font-weight:700;color:var(--m);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid rgba(123,108,231,0.15)}
+.cmp-table th:first-child{text-align:left}
+.cmp-table td{padding:14px 16px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--m);font-size:14px}
+.cmp-table td:first-child{text-align:left;color:var(--t);font-weight:500}
+.cmp-wh{background:rgba(123,108,231,0.08) !important;color:var(--b) !important;font-weight:700 !important}
+.cmp-table th.cmp-wh{color:var(--b) !important}
+
+/* STATS */
+.stats-s{background:var(--s)}
+.stats-g{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:900px;margin:48px auto 0}
+.stat-c{text-align:center;padding:28px 16px;background:var(--bg);border-radius:20px;border:1px solid rgba(123,108,231,0.12)}
+.stat-v{font-size:clamp(26px,3.5vw,40px);font-weight:700;color:var(--t);letter-spacing:-1.5px;margin-bottom:8px}
+.stat-l{font-size:12px;color:var(--m);line-height:1.4}
+
+/* URGENCY */
+.urgency-badge{display:inline-block;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);color:#4ADE80;font-size:11px;font-weight:700;padding:5px 14px;border-radius:980px;margin-bottom:24px;letter-spacing:0.5px;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -194,7 +217,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <a href="#pricing">Цены</a>
     <a href="#faq">Вопросы</a>
   </div>
-  <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
+  <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
 </nav>
 
 <!-- HERO -->
@@ -207,7 +230,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
       <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
     </div>
-    <div class="h-disclaimer">Браслет включён в стоимость · Начисления с первого дня</div>
+    <div class="h-disclaimer">Браслет включён в стоимость · IP68 водонепроницаем</div>
   </div>
   <div class="hero-right">
     <div class="hero-device">
@@ -238,12 +261,12 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="ts-item"><div class="ts-v">$49</div><div class="ts-l">Разовый вход</div></div>
   <div class="ts-item"><div class="ts-v" style="color:#4ADE80">USDT</div><div class="ts-l">Цифровые доллары</div></div>
   <div class="ts-item"><div class="ts-v">14 дней</div><div class="ts-l">Без зарядки</div></div>
-  <div class="ts-item"><div class="ts-v">День 1</div><div class="ts-l">Первые начисления</div></div>
+  <div class="ts-item"><div class="ts-v" style="color:#4ADE80">$8–24</div><div class="ts-l">USDT в первый месяц</div></div>
 </div>
 
 <!-- BRIDGE -->
 <div class="bridge">
-  <div class="bridge-text">Вы уже заботитесь о здоровье.<br><span>Пора зарабатывать на этом.</span></div>
+  <div class="bridge-text">Ваше тело работает каждый день.<br><span>Пора, чтобы оно ещё и зарабатывало.</span></div>
 </div>
 
 <!-- FEATURES -->
@@ -270,8 +293,61 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="fc-icon fi-p">💜</div>
       <div class="fc-t">Состояние</div>
       <div class="fc-pct">35% в WVI</div>
-      <p class="fc-d">Уровень стресса, концентрация и баланс. Браслет считывает 11 эмоциональных маркеров автоматически — без ручного ввода.</p>
+      <p class="fc-d">Уровень стресса, концентрация и баланс. Браслет считывает 18 эмоциональных маркеров автоматически — без ручного ввода.</p>
     </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="section" id="compare">
+  <div class="s-center">
+    <div class="s-label">Сравнение</div>
+    <h2 class="s-h">Единственный<br>с доходом.</h2>
+    <p class="s-sub">Все остальные трекеры берут деньги за данные. Wellex за них платит.</p>
+  </div>
+  <div class="compare-wrap">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th>Функция</th>
+          <th>Apple Watch</th>
+          <th>Oura / Whoop</th>
+          <th class="cmp-wh">Wellex</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Мониторинг здоровья</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td class="cmp-wh">✓</td>
+        </tr>
+        <tr>
+          <td>Пассивный доход в USDT</td>
+          <td>✗</td>
+          <td>✗</td>
+          <td class="cmp-wh">✓</td>
+        </tr>
+        <tr>
+          <td>ИИ-коучинг</td>
+          <td>Базовый</td>
+          <td>Базовый</td>
+          <td class="cmp-wh">Персональный</td>
+        </tr>
+        <tr>
+          <td>Стоимость входа</td>
+          <td>от $399</td>
+          <td>от $228/год</td>
+          <td class="cmp-wh">$49</td>
+        </tr>
+        <tr>
+          <td>Браслет включён</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="cmp-wh">Бесплатно</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -297,6 +373,33 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="hs-n">Шаг 3</div>
       <div class="hs-t">Начисляется доход</div>
       <p class="hs-d">WVI определяет вашу ставку. Платформа распределяет доходность между участниками пропорционально их WVI — выше индекс, выше выплата.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section stats-s" id="results">
+  <div class="s-center">
+    <div class="s-label">Первые участники</div>
+    <h2 class="s-h">Что происходит<br>за 30 дней.</h2>
+    <p class="s-sub">Данные первой волны участников. Индивидуальные результаты варьируются.</p>
+  </div>
+  <div class="stats-g">
+    <div class="stat-c">
+      <div class="stat-v">+90 мин</div>
+      <div class="stat-l">глубокого сна в неделю</div>
+    </div>
+    <div class="stat-c">
+      <div class="stat-v">−24%</div>
+      <div class="stat-l">вариабельность пульса</div>
+    </div>
+    <div class="stat-c">
+      <div class="stat-v">+18 пт</div>
+      <div class="stat-l">средний рост WVI за месяц</div>
+    </div>
+    <div class="stat-c">
+      <div class="stat-v" style="color:#4ADE80">$8–24</div>
+      <div class="stat-l">USDT в первый месяц</div>
     </div>
   </div>
 </section>
@@ -363,8 +466,9 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <section id="pricing">
   <div class="s-center">
     <div class="s-label">Пакеты</div>
+    <div class="urgency-badge">Q2 2026 · Ранний вход</div>
     <h2 class="s-h">Выберите пакет.</h2>
-    <p class="s-sub">Браслет включён. Начисления с первого дня.</p>
+    <p class="s-sub">Браслет включён. Первый WVI — с первой ночи.</p>
   </div>
   <div class="pr-g">
     <div class="pc m">
@@ -408,7 +512,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="after-step">
       <div class="after-num">📦</div>
       <div class="after-t">Получаете браслет</div>
-      <p class="after-d">Отправляем на следующий день. Доставка по всему миру.</p>
+      <p class="after-d">Бесплатная доставка по всему миру: 15–75 дней. Браслет ваш навсегда.</p>
     </div>
     <div class="after-step">
       <div class="after-num">⌚</div>
@@ -418,7 +522,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="after-step">
       <div class="after-num">💰</div>
       <div class="after-t">Получаете доход</div>
-      <p class="after-d">Начисления в USDT с первого дня. Чем лучше показатели — тем выше ставка.</p>
+      <p class="after-d">Первые USDT — на 30-й день, напрямую на ваш кошелёк. Чем выше WVI — тем больше.</p>
     </div>
   </div>
 </section>
@@ -436,7 +540,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </details>
     <details>
       <summary>Деньги настоящие?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Да. USDT — цифровая валюта, жёстко привязанная к доллару США: 1 USDT = $1. Это не «очки» и не внутренние токены. Доход копится на встроенном кошельке Wellex. Клейм — 2 раза в месяц, без комиссии.</p>
+      <p class="faq-body">Да. USDT — цифровая валюта, привязанная к доллару 1:1. Не «очки» и не токены — реальные деньги. Выплаты идут напрямую на ваш кошелёк: Coinbase (проще всего), MetaMask или через Wise — прямо на банковский счёт. Wellex ваши USDT не хранит. Первая выплата — на 30-й день.</p>
     </details>
     <details>
       <summary>Что если не носить браслет каждый день?<span class="faq-icon">+</span></summary>
@@ -444,7 +548,11 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </details>
     <details>
       <summary>Нужно разбираться в крипте?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Нет. Баланс отображается в USDT прямо в аккаунте Wellex. Платформа хранит и начисляет всё сама — никаких действий с вашей стороны. Клейм на встроенный криптокошелёк — 2 раза в месяц, без комиссии.</p>
+      <p class="faq-body">Нет. Для старта нужен только аккаунт Wellex. Для вывода USDT — Coinbase (регистрация 5 минут, без опыта) или MetaMask. Хотите просто в рублях? Конвертируете через Wise и получаете на карту. Если доход вас пока не интересует — можно использовать только как трекер здоровья, никаких крипто-действий.</p>
+    </details>
+    <details>
+      <summary>Нужно ли вносить криптовалюту отдельно?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">Нет. Ваша ежемесячная подписка $19 автоматически входит в пул USDT-стейкинга. Wellex управляет пулом за вас. Никаких дополнительных депозитов, никаких токенов — вы просто носите браслет и живёте как обычно.</p>
     </details>
     <details>
       <summary>Что будет после 2 месяцев?<span class="faq-icon">+</span></summary>
@@ -452,7 +560,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </details>
     <details>
       <summary>Когда придёт первый доход?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Первые 7 дней браслет изучает именно вас — собирает данные и выстраивает вашу личную базовую линию. На 8-й день утром появляется первый WVI и начисляется первый доход. Это не задержка — это точность: ваша ставка рассчитывается под вас, а не по шаблону.</p>
+      <p class="faq-body">Первые 7 дней браслет строит вашу личную базовую линию. На утро 7-го дня появляется первый WVI — один номер, одно направление. Первые USDT приходят на 30-й день, когда пул делает первый ежемесячный расчёт. Это не задержка — это реальные деньги из реального пула, а не мгновенные «бонусные очки».</p>
     </details>
   </div>
 </section>
