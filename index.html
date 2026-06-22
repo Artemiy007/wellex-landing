@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wellex — Живи лучше, зарабатывай больше</title>
+<title>Wellex — Здоровье, которое платит</title>
+<meta name="description" content="Браслет Wellex отслеживает три показателя здоровья. WVI определяет вашу долю в USDT-пуле — чем здоровее, тем выше ежемесячный доход. Стартовый пакет $49, браслет включён.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://artemiy007.github.io/wellex-landing/">
+<meta property="og:title" content="Wellex — Здоровье, которое платит">
+<meta property="og:description" content="Браслет + WVI + USDT-пул. $49 разово, браслет включён. Первый доход — на 30-й день.">
+<meta property="og:site_name" content="Wellex">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Wellex — Здоровье, которое платит">
+<meta name="twitter:description" content="Браслет + WVI + USDT-пул. $49, браслет включён. Первый доход на 30-й день.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237B6CE7'/><text x='16' y='23' text-anchor='middle' font-size='18' font-family='Inter,sans-serif' font-weight='700' fill='white'>W</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -13,7 +23,7 @@ body{background:var(--bg);color:var(--t);font-family:'Inter',system-ui,sans-seri
 
 /* NAV */
 nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(123,108,231,0.15);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:52px;z-index:100}
-.logo{font-size:17px;font-weight:600;color:var(--t);letter-spacing:-0.5px}
+.logo{font-size:13px;font-weight:700;color:var(--t);letter-spacing:3px;text-transform:uppercase}
 .nav-c{display:flex;gap:32px}
 .nav-c a{font-size:13px;color:var(--m);text-decoration:none;transition:color 0.2s}
 .nav-c a:hover{color:var(--t)}
@@ -131,6 +141,7 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 .pc.m .pc-btn:hover{background:var(--bh)}
 .pc:not(.m) .pc-btn{background:rgba(123,108,231,0.12);color:var(--t)}
 .pc-killer{font-size:12px;color:var(--b);margin-top:12px;font-weight:500}
+.pr-note{text-align:center;font-size:13px;color:var(--m);margin-top:20px;line-height:1.7}
 
 /* ПОСЛЕ ЗАКАЗА */
 #after{padding:80px 40px;background:var(--bg);border-top:1px solid rgba(123,108,231,0.08)}
@@ -213,7 +224,12 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 
 /* WVI TABLE */
 .wvi-tbl{max-width:560px;margin:40px auto 0;display:flex;flex-direction:column;gap:6px}
-.wvi-row{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-radius:12px;background:var(--s)}
+.wvi-row{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-radius:12px;background:var(--s);border-left:3px solid rgba(90,84,114,0.3)}
+.wvi-row:nth-child(3){border-left-color:rgba(123,108,231,0.35)}
+.wvi-row:nth-child(4){border-left-color:rgba(123,108,231,0.55)}
+.wvi-row:nth-child(5){border-left-color:rgba(123,108,231,0.75)}
+.wvi-row:nth-child(6){border-left-color:var(--b)}
+.wvi-row:nth-child(7){border-left-color:var(--g);border-left-width:4px}
 .wvi-rng{font-size:14px;font-weight:500;color:var(--m)}
 .wvi-rt{font-size:15px;font-weight:700;color:var(--t)}
 .wvi-rt.wvi-hi{color:var(--b)}
@@ -232,6 +248,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="logo">Wellex</div>
   <div class="nav-c">
     <a href="#h">Как работает</a>
+    <a href="#results">Результаты</a>
     <a href="#calc">Мой доход</a>
     <a href="#pricing">Цены</a>
     <a href="#faq">Вопросы</a>
@@ -249,7 +266,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
       <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
     </div>
-    <div class="h-disclaimer">Браслет включён в стоимость · IP68 водонепроницаем</div>
+    <div class="h-disclaimer">Браслет включён в стоимость · IP68 водонепроницаем · Отмена в любой момент</div>
   </div>
   <div class="hero-right">
     <div class="hero-device">
@@ -513,6 +530,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         <div class="pi">Доход зависит от вашего WVI</div>
       </div>
       <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет</button>
+      <div class="pc-killer">Отмена подписки — в любой момент</div>
     </div>
     <div class="pc">
       <div class="pc-l">Партнёр</div>
@@ -529,6 +547,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-killer">Зарабатываете от WVI и от команды</div>
     </div>
   </div>
+  <p class="pr-note">Итого за год: $239 · Whoop $288/год без дохода · Apple Watch $249 без дохода</p>
 </section>
 
 <!-- ПОСЛЕ ЗАКАЗА -->
@@ -547,7 +566,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="after-step">
       <div class="after-num">⌚</div>
       <div class="after-t">Надеваете и живёте</div>
-      <p class="after-d">Браслет работает автоматически. Никаких ручных вводов — только жить как обычно.</p>
+      <p class="after-d">Подключение через Apple Health / Google Fit — 30 секунд. Браслет работает автоматически, без ручных вводов.</p>
     </div>
     <div class="after-step">
       <div class="after-num">💰</div>
