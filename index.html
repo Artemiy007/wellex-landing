@@ -241,12 +241,70 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .fcta-h{font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;color:var(--t)}
 .fcta-sub{font-size:17px;color:var(--m);margin-bottom:36px;line-height:1.5}
 
+/* HOVER LIFTS */
+.fc:hover{transform:translateY(-5px);border-color:rgba(123,108,231,0.3)}
+.stat-c{transition:transform 0.22s,border-color 0.22s}
+.stat-c:hover{transform:translateY(-4px);border-color:rgba(123,108,231,0.28)}
+.pc:hover{transform:translateY(-4px)}
+.wd-c{transition:transform 0.22s,border-color 0.22s}
+.wd-c:hover{transform:translateY(-4px);border-color:rgba(123,108,231,0.3)}
+
+/* ACTIVE NAV */
+.nav-c a.nav-active{color:var(--t)}
+
+/* LANGUAGE SWITCH */
+.lang-sw{display:flex;gap:10px;align-items:center;border-left:1px solid rgba(123,108,231,0.2);padding-left:20px;margin-left:4px}
+.lang-sw span{font-size:11px;font-weight:700;letter-spacing:0.5px;cursor:pointer;color:rgba(90,84,114,0.45)}
+.lang-sw .lang-active{color:var(--t)}
+
+/* FADE UP */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease}
+.fade-up.visible{opacity:1;transform:none}
+
+/* CALC PROGRESS */
+.calc-progress{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:36px}
+.cp-dot{width:9px;height:9px;border-radius:50%;background:var(--s);border:1.5px solid rgba(123,108,231,0.3);transition:background 0.25s,border-color 0.25s}
+.cp-dot.done{background:var(--b);border-color:var(--b)}
+.cp-line{width:36px;height:1px;background:rgba(123,108,231,0.15)}
+.calc-aspire{font-size:13px;color:var(--m);text-align:center;margin-top:12px;line-height:1.5;padding:10px 16px;background:rgba(123,108,231,0.06);border-radius:10px}
+.calc-aspire.hidden{display:none}
+
+/* WITHDRAW */
+#withdraw{background:var(--bg)}
+.wd-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:48px auto 0}
+.wd-c{background:var(--s);border-radius:20px;padding:28px 24px;border:1px solid rgba(123,108,231,0.12);text-align:center}
+.wd-icon{font-size:32px;margin-bottom:14px}
+.wd-t{font-size:17px;font-weight:600;color:var(--t);margin-bottom:10px;letter-spacing:-0.3px}
+.wd-d{font-size:13px;color:var(--m);line-height:1.6;margin-bottom:16px}
+.wd-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:4px 12px;border-radius:980px}
+.wd-tag-rec{color:var(--g);background:rgba(74,222,128,0.1)}
+.wd-tag-pro{color:var(--m);background:rgba(90,84,114,0.15)}
+.wd-tag-easy{color:var(--b);background:rgba(123,108,231,0.1)}
+
+/* HONEST */
+#honest{background:var(--s)}
+.honest-g{max-width:800px;margin:48px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.honest-i{display:flex;gap:16px;align-items:flex-start;background:var(--bg);padding:22px 20px;border-radius:16px}
+.honest-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.honest-t{font-size:14px;font-weight:600;color:var(--t);margin-bottom:5px}
+.honest-d{font-size:13px;color:var(--m);line-height:1.55}
+
+/* STICKY CTA */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,8,20,0.96);backdrop-filter:saturate(180%) blur(20px);padding:12px 20px;border-top:1px solid rgba(123,108,231,0.2);z-index:99;align-items:center;justify-content:space-between;gap:12px}
+.sc-t{font-size:13px;color:var(--m);line-height:1.4}
+.sc-btn{background:var(--b);color:#fff;padding:10px 22px;font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'Inter';border-radius:980px;white-space:nowrap;transition:background 0.2s}
+.sc-btn:hover{background:var(--bh)}
+
 /* RESPONSIVE OVERRIDES — must come after component styles */
 @media(max-width:900px){
   .stats-g{grid-template-columns:1fr 1fr}
   .cmp-table{min-width:0;font-size:12px}
   .cmp-table th,.cmp-table td{padding:10px 8px}
   .cmp-table th:nth-child(2),.cmp-table td:nth-child(2){display:none}
+  .wd-g{grid-template-columns:1fr}
+  .honest-g{grid-template-columns:1fr}
+  .sticky-cta.sc-show{display:flex}
+  .lang-sw{display:none}
 }
 </style>
 </head>
@@ -260,6 +318,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <a href="#calc">Мой доход</a>
     <a href="#pricing">Цены</a>
     <a href="#faq">Вопросы</a>
+    <div class="lang-sw"><span class="lang-active">RU</span><span class="lang-dim">EN</span><span class="lang-dim">KO</span></div>
   </div>
   <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
 </nav>
@@ -303,9 +362,9 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <!-- TRUST STRIP -->
 <div class="trust-strip">
   <div class="ts-item"><div class="ts-v">$49</div><div class="ts-l">Разовый вход</div></div>
-  <div class="ts-item"><div class="ts-v" style="color:#4ADE80">USDT</div><div class="ts-l">Цифровые доллары</div></div>
   <div class="ts-item"><div class="ts-v">14 дней</div><div class="ts-l">Без зарядки</div></div>
   <div class="ts-item"><div class="ts-v" style="color:#4ADE80">$8–24</div><div class="ts-l">USDT в первый месяц</div></div>
+  <div class="ts-item"><div class="ts-v">50+</div><div class="ts-l">Стран доставки</div></div>
 </div>
 
 <!-- BRIDGE -->
@@ -321,7 +380,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <h2 class="s-h">Три показателя.<br>Один доход.</h2>
     <p class="s-sub">Браслет считывает три параметра каждый день. Чем они лучше — тем выше ваш WVI и тем выше ежемесячный доход.</p>
   </div>
-  <div class="fg">
+  <div class="fg fade-up">
     <div class="fc c-sleep">
       <div class="fc-icon fi-g">🌙</div>
       <div class="fc-t">Восстановление</div>
@@ -403,7 +462,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <h2 class="s-h">Как это<br>работает</h2>
     <p class="s-sub" style="margin-bottom:0">От трёх показателей — к реальному доходу.</p>
   </div>
-  <div class="how-g">
+  <div class="how-g fade-up">
     <div class="hs">
       <div class="hs-n">Шаг 1</div>
       <div class="hs-t">Браслет считывает три параметра</div>
@@ -439,7 +498,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <h2 class="s-h">Что происходит<br>за 30 дней.</h2>
     <p class="s-sub">По данным Wellex · первые 90 дней · участники из 8 стран. Индивидуальные результаты варьируются.</p>
   </div>
-  <div class="stats-g">
+  <div class="stats-g fade-up">
     <div class="stat-c">
       <div class="stat-v">+90 мин</div>
       <div class="stat-l">глубокого сна в неделю</div>
@@ -466,6 +525,14 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="s-label">Калькулятор</div>
       <h2 style="font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.05;letter-spacing:-1.5px;margin-bottom:14px;color:var(--t)">Каким будет<br>ваш доход?</h2>
       <p style="font-size:16px;color:var(--m);line-height:1.6">Ответьте на три вопроса — узнайте ваш WVI и ожидаемую доходность.</p>
+    </div>
+
+    <div class="calc-progress">
+      <div class="cp-dot" id="cp-sleep"></div>
+      <div class="cp-line"></div>
+      <div class="cp-dot" id="cp-act"></div>
+      <div class="cp-line"></div>
+      <div class="cp-dot" id="cp-em"></div>
     </div>
 
     <div class="calc-q">
@@ -512,6 +579,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         </div>
       </div>
       <p class="calc-tip" id="res-tip"></p>
+      <p class="calc-aspire hidden" id="res-aspire"></p>
       <button class="calc-cta" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
     </div>
   </div>
@@ -525,7 +593,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <h2 class="s-h">Выберите пакет.</h2>
     <p class="s-sub">Браслет включён. Первый WVI — с первой ночи.</p>
   </div>
-  <div class="pr-g">
+  <div class="pr-g fade-up">
     <div class="pc m">
       <div class="pc-l">Стартовый</div>
       <div class="pc-a">$49</div>
@@ -580,6 +648,73 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="after-num">💰</div>
       <div class="after-t">Первый доход — на 30-й день</div>
       <p class="after-d">Первые USDT — на 30-й день, напрямую на ваш кошелёк. Чем выше WVI — тем больше.</p>
+    </div>
+  </div>
+</section>
+
+<!-- КАК ВЫВЕСТИ -->
+<section class="section" id="withdraw">
+  <div class="s-center">
+    <div class="s-label">Вывод средств</div>
+    <h2 class="s-h">Три способа<br>получить деньги.</h2>
+    <p class="s-sub">Wellex перечисляет USDT напрямую на ваш кошелёк. Дальше — сами выбираете.</p>
+  </div>
+  <div class="wd-g fade-up">
+    <div class="wd-c">
+      <div class="wd-icon">💳</div>
+      <div class="wd-t">Coinbase</div>
+      <p class="wd-d">Регистрация 5 минут, без опыта. Получаете USDT, конвертируете в рубли или любую валюту, выводите на карту.</p>
+      <span class="wd-tag wd-tag-rec">Рекомендуем</span>
+    </div>
+    <div class="wd-c">
+      <div class="wd-icon">🦊</div>
+      <div class="wd-t">MetaMask</div>
+      <p class="wd-d">Классический Web3-кошелёк. Полный контроль над активами. Для тех, кто уже знаком с крипто.</p>
+      <span class="wd-tag wd-tag-pro">Для опытных</span>
+    </div>
+    <div class="wd-c">
+      <div class="wd-icon">🏦</div>
+      <div class="wd-t">Wise → Карта</div>
+      <p class="wd-d">Конвертируйте USDT через Wise и получайте рубли или любую валюту прямо на банковский счёт. Без крипто-опыта.</p>
+      <span class="wd-tag wd-tag-easy">Без крипто</span>
+    </div>
+  </div>
+</section>
+
+<!-- ЧЕСТНО -->
+<section class="section" id="honest">
+  <div class="s-center">
+    <div class="s-label">Честно</div>
+    <h2 class="s-h">Что важно знать<br>до покупки.</h2>
+  </div>
+  <div class="honest-g fade-up">
+    <div class="honest-i">
+      <div class="honest-icon">📦</div>
+      <div>
+        <div class="honest-t">Доставка: 15–75 дней</div>
+        <p class="honest-d">Бесплатная, в 50+ стран. Сроки зависят от региона. Трекинг отслеживается в приложении Wellex.</p>
+      </div>
+    </div>
+    <div class="honest-i">
+      <div class="honest-icon">📈</div>
+      <div>
+        <div class="honest-t">Доходность варьируется</div>
+        <p class="honest-d">Ставки WVI фиксированы. Итоговая доходность пула зависит от рыночных условий — как у любого инструмента управления капиталом.</p>
+      </div>
+    </div>
+    <div class="honest-i">
+      <div class="honest-icon">⌚</div>
+      <div>
+        <div class="honest-t">WVI растёт со временем</div>
+        <p class="honest-d">Первые 7 дней — калибровка браслета. Первый WVI появляется на утро 7-го дня. Индекс стабилизируется за 2–3 недели.</p>
+      </div>
+    </div>
+    <div class="honest-i">
+      <div class="honest-icon">💳</div>
+      <div>
+        <div class="honest-t">Подписка не навсегда</div>
+        <p class="honest-d">$19/мес после 2 бесплатных месяцев. Отмена в любой момент — браслет остаётся вашим навсегда.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -647,28 +782,36 @@ function pick(btn) {
   document.querySelectorAll('[data-q="' + q + '"]').forEach(function(b) { b.classList.remove('sel'); });
   btn.classList.add('sel');
   ans[q] = parseInt(btn.dataset.v);
+  if (ans.sleep) document.getElementById('cp-sleep').classList.add('done');
+  if (ans.act) document.getElementById('cp-act').classList.add('done');
+  if (ans.em) document.getElementById('cp-em').classList.add('done');
   if (ans.sleep && ans.act && ans.em) showResult();
 }
 
 function showResult() {
   var score = ans.sleep + ans.act + ans.em;
-  var wvi, mo, yr, tip;
+  var wvi, mo, yr, tip, aspire;
 
   if (score <= 4) {
     wvi = '20–35'; mo = '1%'; yr = '12%';
     tip = 'WVI пока низкий — но доход уже идёт. Улучшите сон на 1 час и добавьте немного движения — WVI вырастет, ставка поднимется.';
+    aspire = '→ Большинство новых участников вырастают на +18 пт WVI за первый месяц. Брасле помогает туда добраться.';
   } else if (score <= 6) {
     wvi = '40–55'; mo = '2–5%'; yr = '24–60%';
     tip = 'Средний WVI — хороший старт. Добавьте 2 000 шагов в день и следите за качеством сна: WVI и выплата заметно вырастут.';
+    aspire = '→ При WVI 90+ ставка: 20%/мес. Средний рост за первый месяц — +18 пт.';
   } else if (score <= 8) {
     wvi = '60–75'; mo = '8–12%'; yr = '96–144%';
     tip = 'Хорошие показатели. Поработайте над режимом сна и эмоциональным состоянием — WVI выйдет на следующий уровень.';
+    aspire = '→ Ещё 15–30 пт — и ставка выйдет на 16–20%/мес. Первый месяц обычно даёт +18 пт.';
   } else if (score <= 10) {
     wvi = '76–87'; mo = '12–16%'; yr = '144–192%';
     tip = 'Вы уже в верхней части шкалы. Небольшие улучшения сна и активности — и WVI выйдет на максимум.';
+    aspire = '→ До максимальной ставки 20%/мес — совсем близко. Браслет покажет точно, что улучшить.';
   } else {
     wvi = '88–100'; mo = '16–20%'; yr = '192–240%';
     tip = 'Отличные показатели по всем трём параметрам. Вы в зоне максимальных начислений Wellex.';
+    aspire = null;
   }
 
   document.getElementById('res-wvi').textContent = wvi;
@@ -676,11 +819,49 @@ function showResult() {
   document.getElementById('res-yr').textContent = yr;
   document.getElementById('res-tip').textContent = tip;
 
+  var aspireEl = document.getElementById('res-aspire');
+  if (aspire) { aspireEl.textContent = aspire; aspireEl.classList.remove('hidden'); }
+  else { aspireEl.classList.add('hidden'); }
+
   var el = document.getElementById('calc-res');
   el.classList.remove('hidden');
   el.classList.add('visible');
   setTimeout(function() { el.scrollIntoView({behavior: 'smooth', block: 'nearest'}); }, 150);
 }
+
+// Fade-up on scroll
+var fadeObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); }
+  });
+}, {threshold: 0.08});
+document.querySelectorAll('.fade-up').forEach(function(el) { fadeObserver.observe(el); });
+
+// Active nav on scroll
+var navSections = document.querySelectorAll('section[id]');
+var navLinks = document.querySelectorAll('.nav-c a');
+window.addEventListener('scroll', function() {
+  var cur = '';
+  navSections.forEach(function(s) {
+    if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+  });
+  navLinks.forEach(function(a) {
+    a.classList.toggle('nav-active', a.getAttribute('href') === '#' + cur);
+  });
+}, {passive: true});
+
+// Sticky CTA mobile
+var heroSection = document.getElementById('hero');
+var stickyCta = document.getElementById('sticky-cta');
+window.addEventListener('scroll', function() {
+  var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+  stickyCta.classList.toggle('sc-show', window.scrollY > heroBottom);
+}, {passive: true});
 </script>
+
+<div class="sticky-cta" id="sticky-cta">
+  <span class="sc-t">Браслет включён · Доставка бесплатно</span>
+  <button class="sc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Получить — $49</button>
+</div>
 </body>
 </html>
