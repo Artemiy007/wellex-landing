@@ -205,6 +205,18 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 
 /* URGENCY */
 .urgency-badge{display:inline-block;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);color:#4ADE80;font-size:11px;font-weight:700;padding:5px 14px;border-radius:980px;margin-bottom:24px;letter-spacing:0.5px;text-transform:uppercase}
+
+/* BRIDGE SUB */
+.bridge-sub{font-size:15px;color:var(--m);margin-top:20px;line-height:1.6;max-width:560px;margin-left:auto;margin-right:auto}
+
+/* WVI TABLE */
+.wvi-tbl{max-width:560px;margin:40px auto 0;display:flex;flex-direction:column;gap:6px}
+.wvi-row{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-radius:12px;background:var(--s)}
+.wvi-rng{font-size:14px;font-weight:500;color:var(--m)}
+.wvi-rt{font-size:15px;font-weight:700;color:var(--t)}
+.wvi-rt.wvi-hi{color:var(--b)}
+.wvi-rt.wvi-max{color:#4ADE80}
+.wvi-caption{text-align:center;font-size:12px;color:var(--m);margin-top:10px;opacity:0.7}
 </style>
 </head>
 <body>
@@ -223,7 +235,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <!-- HERO -->
 <section id="hero">
   <div class="hero-text">
-    <div class="h-eyebrow">Ежемесячный доход в USDT</div>
+    <div class="h-eyebrow">Ежемесячный доход в долларах</div>
     <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
     <p class="h-sub">Браслет отслеживает здоровье — чем лучше состояние, тем выше доход.</p>
     <div class="h-btns">
@@ -267,6 +279,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <!-- BRIDGE -->
 <div class="bridge">
   <div class="bridge-text">Ваше тело работает каждый день.<br><span>Пора, чтобы оно ещё и зарабатывало.</span></div>
+  <p class="bridge-sub">Wellex управляет USDT-пулом. Ваш WVI определяет ставку — чем здоровее, тем выше доход.</p>
 </div>
 
 <!-- FEATURES -->
@@ -336,7 +349,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         </tr>
         <tr>
           <td>Стоимость входа</td>
-          <td>от $399</td>
+          <td>от $249</td>
           <td>от $228/год</td>
           <td class="cmp-wh">$49</td>
         </tr>
@@ -374,6 +387,16 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="hs-t">Начисляется доход</div>
       <p class="hs-d">WVI определяет вашу ставку. Платформа распределяет доходность между участниками пропорционально их WVI — выше индекс, выше выплата.</p>
     </div>
+    <div class="wvi-tbl">
+      <div class="wvi-row"><span class="wvi-rng">WVI 0 – 39</span><span class="wvi-rt">1% / мес</span></div>
+      <div class="wvi-row"><span class="wvi-rng">WVI 40 – 49</span><span class="wvi-rt">2% / мес</span></div>
+      <div class="wvi-row"><span class="wvi-rng">WVI 50 – 59</span><span class="wvi-rt">5% / мес</span></div>
+      <div class="wvi-row"><span class="wvi-rng">WVI 60 – 69</span><span class="wvi-rt">8% / мес</span></div>
+      <div class="wvi-row"><span class="wvi-rng">WVI 70 – 79</span><span class="wvi-rt wvi-hi">12% / мес</span></div>
+      <div class="wvi-row"><span class="wvi-rng">WVI 80 – 89</span><span class="wvi-rt wvi-hi">16% / мес</span></div>
+      <div class="wvi-row"><span class="wvi-rng">WVI 90 – 100</span><span class="wvi-rt wvi-max">20% / мес</span></div>
+      <p class="wvi-caption">Ставка определяется вашим WVI и обновляется каждое утро</p>
+    </div>
   </div>
 </section>
 
@@ -382,7 +405,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="s-center">
     <div class="s-label">Первые участники</div>
     <h2 class="s-h">Что происходит<br>за 30 дней.</h2>
-    <p class="s-sub">Данные первой волны участников. Индивидуальные результаты варьируются.</p>
+    <p class="s-sub">Первые участники из 8 стран. Индивидуальные результаты варьируются.</p>
   </div>
   <div class="stats-g">
     <div class="stat-c">
@@ -490,7 +513,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-p">Разово · Всё из стартового + сеть · $19/мес после 2 месяцев</div>
       <div class="pc-ls">
         <div class="pi">Всё из стартового пакета</div>
-        <div class="pi">Доход за каждого привлечённого</div>
+        <div class="pi">Реферальный доход (по желанию)</div>
         <div class="pi">Бонусы от активности команды</div>
         <div class="pi">Ранговые вознаграждения</div>
         <div class="pi">Программа лояльности</div>
@@ -566,7 +589,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 </section>
 
 <footer>
-  <span>© 2026 Wellex</span>
+  <span>© 2026 Wellex · Calon Wealth Management Ltd · Reg. №14813653 · Англия</span>
   <span>wellex.io</span>
   <span>Здоровье, которое приносит доход.</span>
 </footer>
