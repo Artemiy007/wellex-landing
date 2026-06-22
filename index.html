@@ -181,6 +181,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .bridge{padding:48px 24px}
   .trust-strip{padding:20px 24px;gap:24px}
   footer{flex-direction:column;gap:8px;text-align:center}
+  #final-cta{padding:60px 20px}
   .stats-g{grid-template-columns:1fr 1fr}
   .compare-wrap{margin:32px 0 0}
 }
@@ -217,6 +218,11 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .wvi-rt.wvi-hi{color:var(--b)}
 .wvi-rt.wvi-max{color:#4ADE80}
 .wvi-caption{text-align:center;font-size:12px;color:var(--m);margin-top:10px;opacity:0.7}
+
+/* FINAL CTA */
+#final-cta{padding:80px 40px;background:linear-gradient(180deg,var(--s) 0%,var(--bg) 100%);text-align:center}
+.fcta-h{font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;color:var(--t)}
+.fcta-sub{font-size:17px;color:var(--m);margin-bottom:36px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -263,7 +269,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         <div class="dm"><div class="dm-l">Состояние</div><div class="dm-v">Хорошо</div></div>
         <div class="dm"><div class="dm-l">Доход/мес</div><div class="dm-v" style="color:#4ADE80">16%</div></div>
       </div>
-      <div class="dev-ai">«Сон улучшился на 8%. Нервная система стабильна. Ещё 2 тренировки — WVI достигнет 93 и доходность вырастет до 20%.»</div>
+      <div class="dev-ai">«Сон улучшился на 8%. Нервная система стабильна. Ещё 2 тренировки — WVI достигнет 93. Ставка выйдет на максимум.»</div>
     </div>
   </div>
 </section>
@@ -316,7 +322,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="s-center">
     <div class="s-label">Сравнение</div>
     <h2 class="s-h">Единственный<br>с доходом.</h2>
-    <p class="s-sub">Все остальные трекеры берут деньги за данные. Wellex за них платит.</p>
+    <p class="s-sub">Все остальные трекеры берут деньги за данные о вашем здоровье. Wellex платит вам.</p>
   </div>
   <div class="compare-wrap">
     <table class="cmp-table">
@@ -396,7 +402,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="wvi-row"><span class="wvi-rng">WVI 70 – 79</span><span class="wvi-rt wvi-hi">12% / мес</span></div>
     <div class="wvi-row"><span class="wvi-rng">WVI 80 – 89</span><span class="wvi-rt wvi-hi">16% / мес</span></div>
     <div class="wvi-row"><span class="wvi-rng">WVI 90 – 100</span><span class="wvi-rt wvi-max">20% / мес</span></div>
-    <p class="wvi-caption">Официальные ставки Wellex · доходность пула может варьироваться · обновляется каждое утро</p>
+    <p class="wvi-caption">Официальные ставки Wellex · доходность пула может варьироваться</p>
   </div>
 </section>
 
@@ -414,7 +420,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </div>
     <div class="stat-c">
       <div class="stat-v">−24%</div>
-      <div class="stat-l">вариабельность пульса</div>
+      <div class="stat-l">нагрузка на сердце</div>
     </div>
     <div class="stat-c">
       <div class="stat-v">+18 пт</div>
@@ -501,7 +507,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-ls">
         <div class="pi">Браслет Wellex</div>
         <div class="pi">2 месяца подписки</div>
-        <div class="pi">Умный анализ 24/7</div>
+        <div class="pi">Персональный ИИ-коучинг 24/7</div>
         <div class="pi">Ежемесячные начисления в USDT</div>
         <div class="pi">Доход зависит от вашего WVI</div>
       </div>
@@ -514,8 +520,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-ls">
         <div class="pi">Всё из стартового пакета</div>
         <div class="pi">Реферальный доход (по желанию)</div>
-        <div class="pi">Бонусы от активности команды</div>
-        <div class="pi">Ранговые вознаграждения</div>
+        <div class="pi">Командный бонус (опционально)</div>
+        <div class="pi">Ранговые выплаты</div>
         <div class="pi">Программа лояльности</div>
       </div>
       <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Стать партнёром</button>
@@ -544,7 +550,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </div>
     <div class="after-step">
       <div class="after-num">💰</div>
-      <div class="after-t">Получаете доход</div>
+      <div class="after-t">Первый доход — на 30-й день</div>
       <p class="after-d">Первые USDT — на 30-й день, напрямую на ваш кошелёк. Чем выше WVI — тем больше.</p>
     </div>
   </div>
@@ -578,6 +584,10 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <p class="faq-body">Нет. Ваша ежемесячная подписка $19 автоматически входит в пул USDT-стейкинга. Wellex управляет пулом за вас. Никаких дополнительных депозитов, никаких токенов — вы просто носите браслет и живёте как обычно.</p>
     </details>
     <details>
+      <summary>Откуда берётся доход пула?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">Wellex формирует общий USDT-пул из ежемесячных подписок участников и управляет им через диверсифицированные DeFi-стратегии. Ежемесячно пул распределяет доходность между всеми участниками — пропорционально WVI. Более высокий индекс здоровья = большая доля в распределении.</p>
+    </details>
+    <details>
       <summary>Что будет после 2 месяцев?<span class="faq-icon">+</span></summary>
       <p class="faq-body">Подписка продлевается за $19 в месяц. Доход продолжает начисляться в обычном режиме. Никаких скрытых платежей — вы сами решаете, продолжать или нет.</p>
     </details>
@@ -586,6 +596,13 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <p class="faq-body">Первые 7 дней браслет строит вашу личную базовую линию. На утро 7-го дня появляется первый WVI — один номер, одно направление. Первые USDT приходят на 30-й день, когда пул делает первый ежемесячный расчёт. Это не задержка — это реальные деньги из реального пула, а не мгновенные «бонусные очки».</p>
     </details>
   </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <h2 class="fcta-h">Готовы начать?</h2>
+  <p class="fcta-sub">Браслет включён. Доставка бесплатно. Первый WVI — с первой ночи.</p>
+  <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
 </section>
 
 <footer>
