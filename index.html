@@ -105,7 +105,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 </nav>
 
 <section id="hero">
-  <div class="h-eyebrow">От 12% годовых в USDT</div>
+  <div class="h-eyebrow">От 12% годовых в USDT — цифровых долларах</div>
   <h1>Деньги<br>пока<br>спишь.</h1>
   <p class="h-sub">Браслет отслеживает здоровье — чем лучше состояние, тем выше доход.</p>
   <div class="h-btns">
@@ -114,7 +114,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   </div>
   <div class="h-disclaimer">Браслет + 2 месяца подписки включены</div>
   <div class="hero-device">
-    <div class="dev-score-label">Ваш WVI сегодня</div>
+    <div class="dev-score-label">Ваш индекс здоровья (WVI)</div>
     <div class="dev-score">87</div>
     <div class="dev-status">Отличный день</div>
     <div class="dev-metrics">
@@ -133,39 +133,21 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <h2 class="s-h">Три показателя.<br>Один индекс.</h2>
     <p class="s-sub">Браслет считывает три параметра каждый день. Чем они лучше — тем выше ваш WVI и тем выше ежемесячный доход.</p>
   </div>
-  <div class="fg">
+  <div class="fg" style="max-width:900px">
     <div class="fc">
       <div class="fc-icon fi-g">🌙</div>
-      <div class="fc-sub">35% вашего WVI</div>
       <div class="fc-t">Качество сна</div>
       <p class="fc-d">Глубина, продолжительность, фазы восстановления. Браслет знает, насколько хорошо вы отдохнули — точнее, чем вы сами.</p>
     </div>
     <div class="fc">
       <div class="fc-icon fi-r">⚡</div>
-      <div class="fc-sub">30% вашего WVI</div>
       <div class="fc-t">Физическая активность</div>
       <p class="fc-d">Шаги, тренировки, нагрузка в течение дня. Не усреднённая норма — ваш личный ритм и прогресс.</p>
     </div>
     <div class="fc">
       <div class="fc-icon fi-p">💜</div>
-      <div class="fc-sub">35% вашего WVI</div>
       <div class="fc-t">Эмоциональный фон</div>
-      <p class="fc-d">Уровень стресса, баланс нервной системы, способность к восстановлению. Измеряется через вариабельность сердечного ритма.</p>
-    </div>
-    <div class="fc">
-      <div class="fc-icon fi-p">🤖</div>
-      <div class="fc-t">Умный анализ</div>
-      <p class="fc-d">Находит ваши личные паттерны. Подсказывает, что именно влияет на ваш WVI и как его улучшить. Точнее с каждой неделей.</p>
-    </div>
-    <div class="fc">
-      <div class="fc-icon fi-o">💰</div>
-      <div class="fc-t">Ваш доход</div>
-      <p class="fc-d">WVI напрямую определяет размер ежемесячных выплат в USDT. От 12% до 240% годовых. Начисляется автоматически.</p>
-    </div>
-    <div class="fc">
-      <div class="fc-icon fi-g">📡</div>
-      <div class="fc-t">14 дней без зарядки</div>
-      <p class="fc-d">Браслет работает непрерывно. Просто носите — он считывает данные сам. Никаких дополнительных действий.</p>
+      <p class="fc-d">Уровень стресса и способность организма восстанавливаться после нагрузок. Браслет считывает это автоматически.</p>
     </div>
   </div>
 </section>
@@ -185,7 +167,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="hs">
       <div class="hs-n">Шаг 2</div>
       <div class="hs-t">Рассчитывается ваш WVI</div>
-      <p class="hs-d">WVI — индекс состояния от 0 до 100. Складывается из трёх параметров: сон (35%), активность (30%), эмоции (35%). Обновляется каждое утро.</p>
+      <p class="hs-d">WVI — индекс состояния от 0 до 100. Складывается из трёх параметров: качество сна, физическая активность и эмоциональный фон. Обновляется каждое утро.</p>
     </div>
     <div class="hs">
       <div class="hs-n">Шаг 3</div>
@@ -323,7 +305,7 @@ function showResult() {
     tip = 'Вы уже в топе. Несколько шагов до максимальной ставки 20% в месяц (240% годовых).';
   } else {
     wvi = '88–100'; mo = '17–20%'; yr = '204–240%';
-    tip = 'Отличные показатели. Вы в зоне максимальной доходности — до 20% в месяц на каждую вложенную $1 000.';
+    tip = 'Отличные показатели. Вы в зоне максимальной доходности Wellex — до 20% в месяц, 240% годовых.';
   }
 
   document.getElementById('res-wvi').textContent = wvi;
