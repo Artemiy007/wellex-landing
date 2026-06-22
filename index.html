@@ -26,7 +26,8 @@ h1{font-size:clamp(48px,8vw,96px);font-weight:700;line-height:1;letter-spacing:-
 .btn-blue:hover{background:var(--bh)}
 .btn-ghost{background:transparent;color:var(--b);padding:14px 28px;font-size:17px;font-weight:500;border:none;cursor:pointer;font-family:'Inter';border-radius:980px;letter-spacing:-0.3px;text-decoration:underline;text-underline-offset:2px}
 .h-disclaimer{margin-top:16px;font-size:12px;color:var(--m)}
-.hero-device{margin:60px auto;width:320px;background:linear-gradient(135deg,#1D1D1F,#2D2D2F);border-radius:32px;padding:32px 28px;box-shadow:0 40px 80px rgba(0,0,0,0.15),0 2px 8px rgba(0,0,0,0.1);border:1px solid rgba(255,255,255,0.1)}
+.hero-device{margin:48px auto 0;width:300px;background:linear-gradient(135deg,#1D1D1F,#2D2D2F);border-radius:28px;padding:24px 22px;box-shadow:0 40px 80px rgba(0,0,0,0.15),0 2px 8px rgba(0,0,0,0.1);border:1px solid rgba(255,255,255,0.1)}
+@media(max-width:768px){.hero-device{width:100%;max-width:320px;margin-top:36px}.dev-score{font-size:56px}.dev-ai{font-size:11px}}
 .dev-score-label{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:4px}
 .dev-score{font-size:72px;font-weight:700;color:#fff;line-height:0.85;letter-spacing:-2px;margin-bottom:4px}
 .dev-status{font-size:14px;font-weight:500;color:#34D399;margin-bottom:24px}
@@ -81,9 +82,9 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .calc-opt{background:var(--bg);border:1px solid rgba(123,108,231,0.2);border-radius:12px;padding:14px 18px;cursor:pointer;font-size:14px;color:var(--m);transition:all 0.2s;text-align:left;font-family:'Inter'}
 .calc-opt:hover{border-color:var(--b);color:var(--t)}
 .calc-opt.sel{border-color:var(--b);background:rgba(123,108,231,0.12);color:var(--t)}
-.calc-result{background:var(--bg);border:1px solid rgba(123,108,231,0.2);border-radius:20px;padding:40px;text-align:center;transition:opacity 0.4s,transform 0.4s;transform:translateY(8px)}
-.calc-result.hidden{opacity:0.25;pointer-events:none}
-.calc-result.visible{opacity:1;transform:translateY(0)}
+.calc-result{background:var(--bg);border:1px solid rgba(123,108,231,0.2);border-radius:20px;padding:40px;text-align:center;transition:opacity 0.4s,transform 0.4s;transform:translateY(12px);opacity:0}
+.calc-result.hidden{display:none}
+.calc-result.visible{display:block;opacity:1;transform:translateY(0)}
 .calc-wvi{font-size:80px;font-weight:700;line-height:1;letter-spacing:-3px;color:var(--b);margin-bottom:4px}
 .calc-wvi-label{font-size:12px;color:var(--m);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px}
 .calc-nums{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
@@ -105,7 +106,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 </nav>
 
 <section id="hero">
-  <div class="h-eyebrow">От 12% годовых в USDT — цифровых долларах</div>
+  <div class="h-eyebrow">От 12% до 240% годовых</div>
   <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
   <p class="h-sub">Браслет отслеживает здоровье — чем лучше состояние, тем выше доход.</p>
   <div class="h-btns">
@@ -136,7 +137,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 
 <section class="section" id="f">
   <div class="s-center">
-    <div class="s-label">Что считается</div>
+    <div class="s-label">Как работает WVI</div>
     <h2 class="s-h">Три показателя.<br>Один индекс.</h2>
     <p class="s-sub">Браслет считывает три параметра каждый день. Чем они лучше — тем выше ваш WVI и тем выше ежемесячный доход.</p>
   </div>
@@ -245,7 +246,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="s-center">
     <div class="s-label">Цены</div>
     <h2 class="s-h">Начать легко.</h2>
-    <p class="s-sub">Браслет + 2 месяца подписки в стартовом пакете.</p>
+    <p class="s-sub">Браслет включён. Начисления с первого дня.</p>
   </div>
   <div class="pr-g">
     <div class="pc m">
@@ -280,7 +281,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <footer>
   <span>© 2026 Wellex</span>
   <span>wellex.io</span>
-  <span>Живи дольше. Живи богаче.</span>
+  <span>Здоровье, которое приносит доход.</span>
 </footer>
 
 <script>
