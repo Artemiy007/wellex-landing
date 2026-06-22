@@ -101,18 +101,18 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <nav>
   <div class="logo">Wellex</div>
   <div class="nav-c"><a href="#f">Как работает</a><a href="#calc">Мой доход</a><a href="#pricing">Цены</a></div>
-  <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Купить — $49</button>
+  <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
 </nav>
 
 <section id="hero">
   <div class="h-eyebrow">От 12% годовых в USDT — цифровых долларах</div>
-  <h1>Деньги<br>пока<br>спишь.</h1>
+  <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
   <p class="h-sub">Браслет отслеживает здоровье — чем лучше состояние, тем выше доход.</p>
   <div class="h-btns">
-    <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Купить — $49</button>
+    <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
     <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
   </div>
-  <div class="h-disclaimer">Браслет + 2 месяца подписки включены</div>
+  <div class="h-disclaimer">Браслет включён в стоимость · Начисления с первого дня</div>
   <div class="hero-device">
     <div class="dev-score-label">Ваш индекс здоровья (WVI)</div>
     <div class="dev-score">87</div>
@@ -121,11 +121,18 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="dm"><div class="dm-l">Сон</div><div class="dm-v">92%</div></div>
       <div class="dm"><div class="dm-l">Активность</div><div class="dm-v">Высокая</div></div>
       <div class="dm"><div class="dm-l">Эмоции</div><div class="dm-v">Хорошо</div></div>
-      <div class="dm"><div class="dm-l">Доход / мес</div><div class="dm-v">16%</div></div>
+      <div class="dm"><div class="dm-l">Доход в мес.</div><div class="dm-v">16%</div></div>
     </div>
     <div class="dev-ai">«Сон улучшился на 8%. Нервная система стабильна. Ещё 2 тренировки — WVI достигнет 93 и доходность вырастет до 20%.»</div>
   </div>
 </section>
+
+<div style="background:#120F22;border-top:1px solid rgba(123,108,231,0.1);border-bottom:1px solid rgba(123,108,231,0.1);padding:20px 40px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap">
+  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">$49</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Разовый вход</div></div>
+  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#4ADE80">от 12%</div><div style="font-size:12px;color:#5A5472;margin-top:2px">до 240% годовых</div></div>
+  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">USDT</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Цифровые доллары</div></div>
+  <div style="text-align:center"><div style="font-size:22px;font-weight:700;color:#EDEAF5">День 1</div><div style="font-size:12px;color:#5A5472;margin-top:2px">Первые начисления</div></div>
+</div>
 
 <section class="section" id="f">
   <div class="s-center">
@@ -172,7 +179,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="hs">
       <div class="hs-n">Шаг 3</div>
       <div class="hs-t">Начисляется доход</div>
-      <p class="hs-d">WVI определяет вашу ставку. Выше WVI — выше ежемесячная выплата в USDT. Первые деньги приходят через 24 часа после регистрации.</p>
+      <p class="hs-d">WVI определяет вашу ставку. Платформа распределяет доходность между участниками пропорционально их WVI — выше индекс, выше выплата. Начисления стартуют на следующий день после регистрации.</p>
     </div>
   </div>
 </section>
@@ -182,7 +189,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div style="text-align:center;margin-bottom:48px">
       <div style="font-size:11px;font-weight:700;color:var(--b);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px">Калькулятор</div>
       <h2 style="font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.05;letter-spacing:-1.5px;margin-bottom:14px;color:var(--t)">Каким будет<br>ваш доход?</h2>
-      <p style="font-size:16px;color:var(--m);line-height:1.6">Ответьте на три вопроса — узнайте свой примерный WVI и ожидаемый доход.</p>
+      <p style="font-size:16px;color:var(--m);line-height:1.6">Ответьте на три вопроса — узнайте ваш WVI и ожидаемую доходность.</p>
     </div>
 
     <div class="calc-q">
@@ -217,7 +224,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 
     <div class="calc-result hidden" id="calc-res">
       <div class="calc-wvi" id="res-wvi">—</div>
-      <div class="calc-wvi-label">Ваш примерный WVI</div>
+      <div class="calc-wvi-label">Ваш индекс здоровья (WVI)</div>
       <div class="calc-nums">
         <div class="calc-num">
           <div class="calc-num-v" id="res-mo">—</div>
@@ -252,7 +259,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         <div class="pi">Ежемесячный доход в USDT</div>
         <div class="pi">От 12% до 240% годовых</div>
       </div>
-      <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Купить</button>
+      <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать</button>
     </div>
     <div class="pc">
       <div class="pc-l">Партнёр</div>
@@ -260,10 +267,10 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-p">Разово · Всё из стартового + доход с сети</div>
       <div class="pc-ls">
         <div class="pi">Всё из стартового пакета</div>
-        <div class="pi">8 источников дохода</div>
-        <div class="pi">Выплаты за привлечённых</div>
-        <div class="pi">Командные бонусы</div>
-        <div class="pi">Вознаграждения до $50 000</div>
+        <div class="pi">Доход за каждого привлечённого</div>
+        <div class="pi">Бонусы от команды</div>
+        <div class="pi">Ранговые вознаграждения</div>
+        <div class="pi">Программа лояльности</div>
       </div>
       <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Стать партнёром</button>
     </div>
