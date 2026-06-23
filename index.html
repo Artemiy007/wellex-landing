@@ -31,19 +31,21 @@ body{background:var(--bg);color:var(--t);font-family:'Inter',system-ui,sans-seri
 #scroll-prog{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--b);z-index:200;transition:width 0.08s linear;pointer-events:none}
 
 /* CUSTOM SCROLLBAR */
-::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(123,108,231,0.35);border-radius:4px}
-::-webkit-scrollbar-thumb:hover{background:rgba(123,108,231,0.65)}
+::-webkit-scrollbar-thumb{background:rgba(123,108,231,0.6);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:rgba(123,108,231,0.9)}
 
 /* NAV */
-nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(123,108,231,0.12);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:64px;z-index:100}
-.logo{display:flex;align-items:center;gap:7px;text-decoration:none}
+nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(123,108,231,0.12);padding:0;z-index:100}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 40px;height:64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.logo{display:flex;align-items:center;gap:7px;text-decoration:none;justify-self:start}
 .logo-icon{flex-shrink:0}
 .logo-text{font-size:18px;font-weight:200;color:var(--t);letter-spacing:0.22em;text-transform:uppercase;line-height:1}
-.nav-c{display:flex;gap:28px}
-.nav-c a{font-size:14px;font-weight:500;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;white-space:nowrap}
+.nav-c{display:flex;gap:28px;justify-self:center}
+.nav-c a{font-size:15px;font-weight:500;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;white-space:nowrap}
 .nav-c a:hover,.nav-c a.nav-active{color:var(--t)}
+.nav-right{justify-self:end;display:flex;align-items:center;gap:12px}
 .nav-btn{background:var(--b);color:#fff;padding:8px 20px;font-size:14px;font-weight:500;border:none;cursor:pointer;font-family:'Inter';border-radius:980px;transition:background 0.2s;white-space:nowrap}
 .nav-btn:hover{background:var(--bh)}
 
@@ -224,7 +226,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .calc-nums{grid-template-columns:1fr}
   .after-g{grid-template-columns:1fr;gap:32px}
   .after-g::before{display:none}
-  nav{padding:0 20px}
+  .nav-inner{padding:0 20px;grid-template-columns:auto 1fr auto}
   .nav-c{display:none}
   .nav-btn{display:none}
   .nav-burger{display:flex}
@@ -378,28 +380,32 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <div id="scroll-prog"></div>
 
 <nav>
-  <a class="logo" href="#">
-    <svg class="logo-icon" width="48" height="28" viewBox="0 0 1082 630" fill="none" aria-hidden="true">
-      <g stroke="#7B6CE7" fill="none">
-        <path d="M12.5845 12.5845L213.884 616.484L390.022 264.209L540.997 515.834L691.971 264.209L868.109 616.484L1069.41 12.5845" stroke-width="25.1625" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M188.722 12.5845L289.372 289.372L540.996 339.697L792.621 289.372L893.271 12.5845" stroke-width="15.0975" stroke-linejoin="round"/>
-        <path d="M213.884 616.484L289.372 289.372M868.109 616.484L792.621 289.372M390.022 264.209L540.996 339.697M540.996 339.697L691.971 264.209M540.996 339.697V515.834" stroke-width="15.0975" stroke-linejoin="round"/>
-        <path d="M12.5845 12.5845H188.722M893.271 12.5845H1069.41" stroke-width="25.1625" stroke-linecap="round"/>
-      </g>
-    </svg>
-    <span class="logo-text">ellex</span>
-  </a>
-  <div class="nav-c">
-    <a href="#f">Как считается</a>
-    <a href="#results">Результаты</a>
-    <a href="#calc">Мой доход</a>
-    <a href="#pricing">Цены</a>
-    <a href="#faq">Вопросы</a>
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <svg class="logo-icon" width="48" height="28" viewBox="0 0 1082 630" fill="none" aria-hidden="true">
+        <g stroke="#7B6CE7" fill="none">
+          <path d="M12.5845 12.5845L213.884 616.484L390.022 264.209L540.997 515.834L691.971 264.209L868.109 616.484L1069.41 12.5845" stroke-width="25.1625" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M188.722 12.5845L289.372 289.372L540.996 339.697L792.621 289.372L893.271 12.5845" stroke-width="15.0975" stroke-linejoin="round"/>
+          <path d="M213.884 616.484L289.372 289.372M868.109 616.484L792.621 289.372M390.022 264.209L540.996 339.697M540.996 339.697L691.971 264.209M540.996 339.697V515.834" stroke-width="15.0975" stroke-linejoin="round"/>
+          <path d="M12.5845 12.5845H188.722M893.271 12.5845H1069.41" stroke-width="25.1625" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <span class="logo-text">ellex</span>
+    </a>
+    <div class="nav-c">
+      <a href="#f">Как считается</a>
+      <a href="#results">Результаты</a>
+      <a href="#calc">Мой доход</a>
+      <a href="#pricing">Цены</a>
+      <a href="#faq">Вопросы</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-btn" onclick="goRef()">Начать — $49</button>
+      <button class="nav-burger" id="nav-burger" aria-label="Меню" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
-  <button class="nav-btn" onclick="goRef()">Начать — $49</button>
-  <button class="nav-burger" id="nav-burger" aria-label="Меню" onclick="toggleMobileMenu()">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
