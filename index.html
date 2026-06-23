@@ -28,10 +28,10 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--t);font-family:'Inter',system-ui,sans-serif;font-weight:400;overflow-x:hidden;max-width:100vw}
 
 /* NAV */
-nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(123,108,231,0.15);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:52px;z-index:100}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(123,108,231,0.15);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:64px;z-index:100}
+.logo{display:flex;align-items:center;gap:7px;text-decoration:none}
 .logo-icon{flex-shrink:0}
-.logo-text{font-size:14px;font-weight:700;color:var(--t);letter-spacing:3px;text-transform:uppercase;line-height:1}
+.logo-text{font-size:18px;font-weight:200;color:var(--t);letter-spacing:0.22em;text-transform:uppercase;line-height:1}
 .nav-c{display:flex;gap:32px}
 .nav-c a{font-size:13px;color:var(--m);text-decoration:none;transition:color 0.2s}
 .nav-c a:hover{color:var(--t)}
@@ -346,16 +346,15 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 
 <nav>
   <div class="logo">
-    <svg class="logo-icon" width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- corner brackets -->
-      <path d="M0 6 L0 0 L6 0" stroke="#7B6CE7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M30 0 L36 0 L36 6" stroke="#7B6CE7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M0 22 L0 28 L6 28" stroke="#7B6CE7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M30 28 L36 28 L36 22" stroke="#7B6CE7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <!-- W shape -->
-      <path d="M7 6 L11 22 L18 10 L25 22 L29 6" stroke="#7B6CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <svg class="logo-icon" width="48" height="28" viewBox="0 0 1082 630" fill="none" aria-hidden="true">
+      <g stroke="#7B6CE7" fill="none">
+        <path d="M12.5845 12.5845L213.884 616.484L390.022 264.209L540.997 515.834L691.971 264.209L868.109 616.484L1069.41 12.5845" stroke-width="25.1625" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M188.722 12.5845L289.372 289.372L540.996 339.697L792.621 289.372L893.271 12.5845" stroke-width="15.0975" stroke-linejoin="round"/>
+        <path d="M213.884 616.484L289.372 289.372M868.109 616.484L792.621 289.372M390.022 264.209L540.996 339.697M540.996 339.697L691.971 264.209M540.996 339.697V515.834" stroke-width="15.0975" stroke-linejoin="round"/>
+        <path d="M12.5845 12.5845H188.722M893.271 12.5845H1069.41" stroke-width="25.1625" stroke-linecap="round"/>
+      </g>
     </svg>
-    <span class="logo-text">ELLEX</span>
+    <span class="logo-text">ellex</span>
   </div>
   <div class="nav-c">
     <a href="#f">Как считается</a>
