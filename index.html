@@ -351,7 +351,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <a href="#pricing">Цены</a>
     <a href="#faq">Вопросы</a>
   </div>
-  <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
+  <button class="nav-btn" onclick="goRef()">Начать — $49</button>
 </nav>
 
 <!-- HERO -->
@@ -361,7 +361,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
     <p class="h-sub">Браслет формирует ваш <strong style="color:var(--b)">WVI</strong> — чем он выше, тем выше ваш доход в USDT каждый месяц.</p>
     <div class="h-btns">
-      <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
+      <button class="btn-blue" onclick="goRef()">Получить браслет — $49</button>
       <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
     </div>
   </div>
@@ -688,7 +688,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       </div>
       <p class="calc-tip" id="res-tip"></p>
       <p class="calc-aspire hidden" id="res-aspire"></p>
-      <button class="calc-cta" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
+      <button class="calc-cta" onclick="goRef()">Получить браслет — $49</button>
     </div>
   </div>
 </section>
@@ -713,7 +713,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         <div class="pi">Ежемесячные начисления в USDT</div>
         <div class="pi">Доход зависит от вашего WVI</div>
       </div>
-      <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет</button>
+      <button class="pc-btn" onclick="goRef()">Получить браслет</button>
       <div class="pc-killer">Отмена подписки — в любой момент</div>
     </div>
     <div class="pc">
@@ -727,7 +727,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
         <div class="pi">Ранговые выплаты</div>
         <div class="pi">Программа лояльности</div>
       </div>
-      <button class="pc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Стать партнёром</button>
+      <button class="pc-btn" onclick="goRef()">Стать партнёром</button>
       <div class="pc-killer">Зарабатываете от WVI и от команды</div>
     </div>
   </div>
@@ -873,7 +873,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <section id="final-cta">
   <h2 class="fcta-h">Готовы начать?</h2>
   <p class="fcta-sub">Браслет включён. Доставка бесплатно. Первый WVI — на 8-й день.</p>
-  <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
+  <button class="btn-blue" onclick="goRef()">Получить браслет — $49</button>
 </section>
 
 <footer>
@@ -883,6 +883,13 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 </footer>
 
 <script>
+// Security: prevent clickjacking
+if (window.top !== window.self) { window.top.location = window.self.location; }
+
+// Single referral URL — change here only
+var REF_URL = 'https://app.wellex.io/join/boart';
+function goRef() { location.href = REF_URL; }
+
 var ans = {sleep: 0, act: 0, em: 0};
 
 function pick(btn) {
@@ -965,7 +972,7 @@ window.addEventListener('scroll', function() {
 
 <div class="sticky-cta" id="sticky-cta">
   <span class="sc-t">Браслет включён · Доставка бесплатно</span>
-  <button class="sc-btn" onclick="location.href='https://app.wellex.io/join/boart'">Получить — $49</button>
+  <button class="sc-btn" onclick="goRef()">Получить — $49</button>
 </div>
 </body>
 </html>
