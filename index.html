@@ -139,28 +139,27 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 
 /* PRICING */
 #pricing{background:var(--s);padding:80px 40px}
-.pr-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:48px auto 0}
-.pc{background:var(--bg);border-radius:20px;padding:32px;text-align:center;border:1px solid rgba(255,255,255,0.08);transition:border-color 0.3s;position:relative}
-.pc.m{border-color:var(--b)}
+.pr-g{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:940px;margin:48px auto 0}
+.pc{background:var(--bg);border-radius:24px;padding:32px;border:1px solid rgba(255,255,255,0.08);transition:border-color 0.3s;position:relative;display:flex;flex-direction:column}
+.pc.m{border-color:rgba(123,108,231,0.5)}
 .pc-img-wrap{height:192px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
-.pc-img{width:auto;height:192px;object-fit:contain;filter:drop-shadow(0 16px 32px rgba(0,0,0,0.3));display:block}
-.pc-l{font-size:11px;font-weight:600;color:var(--m);margin-bottom:12px;letter-spacing:1.5px;text-transform:uppercase}
-.pc-a{font-size:56px;font-weight:700;letter-spacing:-2px;line-height:1;margin-bottom:2px;display:flex;align-items:baseline;justify-content:center;gap:10px}
+.pc-img{width:auto;height:192px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5));display:block}
+.pc-l{font-size:11px;font-weight:500;color:var(--m);margin-bottom:12px;letter-spacing:1.5px;text-transform:uppercase}
+.pc-a{font-size:52px;font-weight:700;letter-spacing:-2px;line-height:1;margin-bottom:4px;display:flex;align-items:baseline;gap:10px}
 .pc-a-sub{font-size:14px;font-weight:400;letter-spacing:0;color:var(--m)}
-.pc.m .pc-a{color:var(--t)}
 .pc-year{font-size:13px;color:var(--m);margin-bottom:16px}
-.pc-desc{font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.5}
-.pc-p{font-size:13px;color:var(--m);margin-bottom:28px}
-.pc-ls{text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.pi{display:flex;gap:10px;font-size:15px;color:var(--t)}
-.pi::before{content:'✓';color:var(--b);font-weight:700;flex-shrink:0}
-.pc-btn{width:100%;padding:14px;font-family:'Inter';font-size:17px;font-weight:500;cursor:pointer;border-radius:980px;transition:all 0.2s;letter-spacing:-0.3px;border:none}
-.pc.m .pc-btn{background:var(--b);color:#fff}
+.pc-desc{font-size:14px;color:var(--m);margin-bottom:16px;line-height:1.6}
+.pc-divider{height:1px;background:rgba(255,255,255,0.07);margin-bottom:16px}
+.pc-ls{text-align:left;display:flex;flex-direction:column;gap:11px;margin-bottom:24px;flex:1}
+.pi{display:flex;gap:12px;font-size:14px;color:rgba(255,255,255,0.75);align-items:flex-start;line-height:1.4}
+.pi-chk{flex-shrink:0;color:rgba(255,255,255,0.4);margin-top:1px}
+.pc-btn{width:100%;padding:14px 24px;font-family:'Inter';font-size:15px;font-weight:500;cursor:pointer;border-radius:980px;transition:all 0.2s;letter-spacing:-0.2px;border:none;display:flex;align-items:center;justify-content:center;gap:8px}
+.pc:not(.m) .pc-btn{background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.14)}
+.pc:not(.m) .pc-btn:hover{background:rgba(255,255,255,0.09);border-color:rgba(123,108,231,0.35)}
+.pc.m .pc-btn{background:var(--b);color:#fff;border:none}
 .pc.m .pc-btn:hover{background:var(--bh)}
-.pc:not(.m) .pc-btn{background:rgba(123,108,231,0.12);color:var(--t)}
-.pc-killer{font-size:12px;color:var(--b);margin-top:12px;font-weight:500}
-.pc-recommended{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--b);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 16px;border-radius:980px;white-space:nowrap}
-.pr-note{text-align:center;font-size:13px;color:var(--m);margin-top:20px;line-height:1.7}
+.pc-recommended{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:rgba(18,16,32,0.95);border:1px solid rgba(123,108,231,0.4);color:rgba(255,255,255,0.9);font-size:11px;font-weight:600;letter-spacing:1.5px;padding:5px 14px;border-radius:980px;white-space:nowrap;display:flex;align-items:center;gap:5px}
+.pr-note{text-align:center;font-size:13px;color:var(--m);margin-top:24px;line-height:1.7}
 
 /* ПОСЛЕ ЗАКАЗА */
 #after{padding:80px 40px;background:var(--bg);border-top:1px solid rgba(123,108,231,0.08)}
@@ -729,20 +728,19 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-a">$49 <span class="pc-a-sub">2 мес. включено</span></div>
       <div class="pc-year">$228 / год · $19/мес при оплате ежегодно</div>
       <div class="pc-desc">Для личного велнеса. Один браслет, полное приложение, ежедневный балл.</div>
+      <div class="pc-divider"></div>
       <div class="pc-ls">
-        <div class="pi">Браслет Wellex включён</div>
-        <div class="pi">Ежедневный WVI (0–100)</div>
-        <div class="pi">Полное приложение Wellex</div>
-        <div class="pi">ИИ-коучинг и персональные рекомендации</div>
-        <div class="pi">Сон, HRV, восстановление</div>
-        <div class="pi">Доступ к Wellex Yield (стейкинг)</div>
-        <div class="pi">2 месяца подписки включено</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Браслет Wellex включён</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Ежедневный балл здоровья (WVI)</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Полное приложение Wellex</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>ИИ-коучинг и персональные рекомендации</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Сон, HRV, восстановление</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>2 месяца подписки включено</div>
       </div>
-      <button class="pc-btn" onclick="goRef()">Получить Wellex</button>
-      <div class="pc-killer">Отмена — в любой момент</div>
+      <button class="pc-btn" onclick="goRef()">Получить Wellex<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
     <div class="pc m">
-      <div class="pc-recommended">РЕКОМЕНДУЕМ</div>
+      <div class="pc-recommended">✦ РЕКОМЕНДУЕМ</div>
       <div class="pc-img-wrap">
         <img class="pc-img" src="https://wellex.io/images/bands/orange-band-v9.png" alt="Браслет Wellex Partner" loading="lazy">
       </div>
@@ -750,16 +748,16 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-a">$99 <span class="pc-a-sub">2 мес. включено</span></div>
       <div class="pc-year">$228 / год · $19/мес при оплате ежегодно</div>
       <div class="pc-desc">Велнес-бизнес. Всё из Wellness Member + партнёрские инструменты.</div>
+      <div class="pc-divider"></div>
       <div class="pc-ls">
-        <div class="pi">Всё из Wellness Member</div>
-        <div class="pi">Партнёрский дашборд и реф-ссылка</div>
-        <div class="pi">Командный аналитика</div>
-        <div class="pi">Инструменты роста</div>
-        <div class="pi">2 месяца подписки включено</div>
-        <div class="pi">Приоритетная поддержка</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Всё из Wellness Member</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Дашборд партнёра и реф-ссылка</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Командная аналитика</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Инструменты роста и аналитика</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>2 месяца подписки включено</div>
+        <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Приоритетная поддержка</div>
       </div>
-      <button class="pc-btn" onclick="goRef()">Стать партнёром</button>
-      <div class="pc-killer">Зарабатываете от WVI и от команды</div>
+      <button class="pc-btn" onclick="goRef()">Стать партнёром<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
   </div>
   <p class="pr-note">Итого за год: $239 · Whoop $288/год без дохода · Apple Watch $249 без дохода</p>
