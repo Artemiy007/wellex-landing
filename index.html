@@ -290,6 +290,12 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .fcta-h{font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;color:var(--t)}
 .fcta-sub{font-size:17px;color:var(--m);margin-bottom:36px;line-height:1.5}
 
+/* BRACELET FULLSCREEN */
+#band-hero{min-height:100vh;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+#band-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(123,108,231,0.12) 0%,transparent 70%);pointer-events:none}
+.band-hero-img{height:80vh;max-height:700px;width:auto;object-fit:contain;filter:drop-shadow(0 40px 120px rgba(123,108,231,0.35));animation:bandFloat 6s ease-in-out infinite}
+@keyframes bandFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+
 /* HOVER LIFTS */
 .fc:hover{transform:translateY(-5px);border-color:rgba(123,108,231,0.3)}
 .stat-c{transition:transform 0.22s,border-color 0.22s}
@@ -460,6 +466,11 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="ts-item"><div class="ts-v">8</div><div class="ts-l">Датчиков в браслете</div></div>
   <div class="ts-item"><div class="ts-v">Везде</div><div class="ts-l">Бесплатная доставка</div></div>
 </div>
+
+<!-- BRACELET FULLSCREEN -->
+<section id="band-hero">
+  <img class="band-hero-img" src="https://wellex.io/images/bands/orange-band-v9.png" alt="Браслет Wellex" loading="lazy">
+</section>
 
 <!-- BRIDGE -->
 <div class="bridge">
