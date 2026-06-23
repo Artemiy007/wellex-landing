@@ -378,6 +378,17 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .band-info h3{font-size:14px;font-weight:500;color:var(--t);margin-bottom:6px}
 .band-info p{font-size:13px;line-height:1.65;font-weight:500;color:rgba(255,255,255,0.55);margin:0}
 
+/* BRIDGES */
+.bridge2{text-align:center;padding:32px 20px;font-size:clamp(18px,2.2vw,22px);font-weight:300;color:rgba(255,255,255,0.45);font-style:italic;letter-spacing:-0.2px}
+.bridge2 span{color:var(--b);font-style:normal}
+
+/* APP STORE BUTTONS */
+.app-row{display:flex;gap:10px;justify-content:center;align-items:center}
+.app-btn{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);opacity:0.45;cursor:default;color:var(--t);text-decoration:none;pointer-events:none}
+.app-btn-texts{display:flex;flex-direction:column;line-height:1.25}
+.app-btn-soon{font-size:9px;letter-spacing:0.8px;text-transform:uppercase;color:rgba(255,255,255,0.45)}
+.app-btn-name{font-size:14px;font-weight:600}
+
 /* SECTION DIVIDER + GLOW */
 .sec-div{height:1px;background:linear-gradient(to right,transparent,rgba(123,108,231,0.5) 50%,transparent);margin:0}
 .sec-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(80% 50% at 50% 0%,rgba(123,108,231,0.10),transparent 60%);z-index:0}
@@ -577,6 +588,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </div>
   </div>
 </section>
+
+<div class="bridge2">«Браслет, который ведёт тебя.»</div>
 
 <!-- FEATURES -->
 <section class="section" id="f">
@@ -806,6 +819,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </div>
   </div>
 </section>
+
+<div class="bridge2">Ваши данные уже работают.<br><span>Узнайте сколько.</span></div>
 
 <!-- CALCULATOR -->
 <section id="calc">
@@ -1067,6 +1082,25 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <p class="fcta-sub">Браслет включён. Доставка бесплатно. Первый WVI — на 8-й день.</p>
   <button class="btn-blue" onclick="goRef()">Получить браслет — $49</button>
 </section>
+
+<div style="padding:28px 40px 16px;border-top:1px solid rgba(123,108,231,0.1)">
+  <div class="app-row">
+    <a class="app-btn" aria-label="App Store — скоро">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <div class="app-btn-texts">
+        <span class="app-btn-soon">Скоро</span>
+        <span class="app-btn-name">App Store</span>
+      </div>
+    </a>
+    <a class="app-btn" aria-label="Google Play — скоро">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.24.99.2l12.47-7.2-2.87-2.87L3.18 23.76zM.5 1.4C.19 1.74 0 2.28 0 3v18c0 .72.19 1.26.5 1.6l.08.08 10.08-10.08v-.24L.58 1.32.5 1.4zm17.58 9.93l-2.87-1.66-3.22 3.22 3.22 3.22 2.89-1.67c.82-.48.82-1.25-.02-1.77zm-14.9 11.43l12.47-7.2-2.87-2.87L3.18 23.76z"/></svg>
+      <div class="app-btn-texts">
+        <span class="app-btn-soon">Скоро</span>
+        <span class="app-btn-name">Google Play</span>
+      </div>
+    </a>
+  </div>
+</div>
 
 <footer>
   <span>© 2026 Wellex · Юридическое лицо: <a href="https://find-and-update.company-information.service.gov.uk/company/14813653" target="_blank" rel="noopener noreferrer" style="color:var(--m);text-decoration:underline;text-underline-offset:2px">Calon Wealth Management Ltd · Reg. №14813653 · Англия</a></span>
