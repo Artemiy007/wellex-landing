@@ -99,12 +99,16 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 .fc-pct{font-size:11px;font-weight:700;color:var(--b);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase}
 .fc-d{font-size:15px;color:var(--m);line-height:1.6}
 
-/* HOW IT WORKS */
-.how-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:1100px;margin:56px auto 0;background:rgba(123,108,231,0.08);border-radius:20px;overflow:hidden}
-.hs{background:var(--bg);padding:48px 36px}
-.hs-n{font-size:13px;font-weight:600;color:var(--b);margin-bottom:16px;letter-spacing:-0.2px}
-.hs-t{font-size:22px;font-weight:600;margin-bottom:10px;letter-spacing:-0.5px}
-.hs-d{font-size:15px;color:var(--m);line-height:1.6}
+/* HOW IT WORKS — FLOW */
+.flow-wrap{max-width:1100px;margin:56px auto 0;display:flex;align-items:flex-start;gap:8px}
+.flow-c{flex:1;background:var(--s);border-radius:16px;padding:24px 16px;text-align:center;min-width:0;border:1px solid transparent}
+.flow-c.flow-accent{border-color:rgba(123,108,231,0.25)}
+.flow-c.flow-green{border-color:rgba(74,222,128,0.25);background:rgba(74,222,128,0.04)}
+.flow-arr{color:rgba(123,108,231,0.35);font-size:22px;flex-shrink:0;padding-top:36px;line-height:1}
+.flow-n{font-size:10px;font-weight:700;color:var(--b);letter-spacing:2px;margin-bottom:10px;text-transform:uppercase}
+.flow-icon{font-size:26px;margin-bottom:10px}
+.flow-t{font-size:14px;font-weight:600;color:var(--t);margin-bottom:6px;line-height:1.3;letter-spacing:-0.2px}
+.flow-d{font-size:12px;color:var(--m);line-height:1.55}
 
 /* CALCULATOR */
 #calc{padding:80px 40px;background:#0D0B1E;border-top:1px solid rgba(123,108,231,0.1);border-bottom:1px solid rgba(123,108,231,0.1)}
@@ -196,6 +200,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .faq-list{grid-template-columns:1fr}
   .bridge{padding:48px 24px}
   .trust-strip{padding:20px 24px;gap:24px}
+  .flow-wrap{flex-direction:column;gap:4px}
+  .flow-arr{transform:rotate(90deg);padding:0;align-self:center;font-size:18px}
   footer{flex-direction:column;gap:8px;text-align:center}
   #final-cta{padding:60px 20px}
   .stats-g{grid-template-columns:1fr 1fr}
@@ -374,7 +380,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <!-- BRIDGE -->
 <div class="bridge">
   <div class="bridge-text">Вы уже живёте.<br><span>Пора получать за это.</span></div>
-  <p class="bridge-sub">Каждое утро браслет формирует ваш WVI — индекс здоровья от 0 до 100. Он определяет вашу ставку доходности в пуле Wellex: от 1% до 20% в месяц. Живёте здоровее — WVI растёт — доход растёт.</p>
+  <p class="bridge-sub">Один ежедневный WVI. Реальный доход в USDT из мульти-чейн стейкинг-пула. Чем выше WVI — тем выше ваша доля. Никаких токенов. Никогда.</p>
 </div>
 
 <!-- FEATURES -->
@@ -470,23 +476,42 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="s-center">
     <div class="s-label">Принцип</div>
     <h2 class="s-h">Как это<br>работает</h2>
-    <p class="s-sub" style="margin-bottom:0">От четырёх показателей — к реальному доходу.</p>
+    <p class="s-sub" style="margin-bottom:0">Пять шагов — от входа до выплаты.</p>
   </div>
-  <div class="how-g fade-up">
-    <div class="hs">
-      <div class="hs-n">Шаг 1</div>
-      <div class="hs-t">Браслет считывает четыре показателя</div>
-      <p class="hs-d">Каждые сутки отслеживаются сон, восстановление, физическая активность и эмоциональное состояние. Без вашего участия — просто наденьте и живите.</p>
+  <div class="flow-wrap fade-up">
+    <div class="flow-c">
+      <div class="flow-n">01</div>
+      <div class="flow-icon">💳</div>
+      <div class="flow-t">Членский взнос $49</div>
+      <p class="flow-d">Браслет + 2 месяца подписки включены. $19/мес после включённого периода.</p>
     </div>
-    <div class="hs">
-      <div class="hs-n">Шаг 2</div>
-      <div class="hs-t">Рассчитывается ваш WVI</div>
-      <p class="hs-d">WVI — индекс жизненной силы от 0 до 100. Четыре показателя: восстановление (40%), сон (25%), активность (20%), состояние (15%). Обновляется каждое утро.</p>
+    <div class="flow-arr">›</div>
+    <div class="flow-c">
+      <div class="flow-n">02</div>
+      <div class="flow-icon">🔗</div>
+      <div class="flow-t">Стейкинг в USDT</div>
+      <p class="flow-d">Средства работают в сети Polygon. DEX-арбитраж, DeFi-ликвидность, алготорговля.</p>
     </div>
-    <div class="hs">
-      <div class="hs-n">Шаг 3</div>
-      <div class="hs-t">Начисляется доход</div>
-      <p class="hs-d">Первые 7 дней — калибровка под ваш ритм. С 8-го дня WVI установлен и начинает определять вашу ставку доходности (1–20%/мес). Пул работает в трёх направлениях: DEX-арбитраж, DeFi-ликвидность, алготорговля (800+ стратегий). Чем выше WVI — тем выше ваша доходность. Выплата — ежемесячно на кошелёк.</p>
+    <div class="flow-arr">›</div>
+    <div class="flow-c">
+      <div class="flow-n">03</div>
+      <div class="flow-icon">📈</div>
+      <div class="flow-t">Генерация yield</div>
+      <p class="flow-d">Прозрачный APY. 800+ стратегий, обновление каждые 15 минут.</p>
+    </div>
+    <div class="flow-arr">›</div>
+    <div class="flow-c flow-accent">
+      <div class="flow-n">04</div>
+      <div class="flow-icon">⚡</div>
+      <div class="flow-t">Множитель WVI</div>
+      <p class="flow-d">Выше WVI — больше yield. Ваш индекс обновляется каждое утро по данным браслета.</p>
+    </div>
+    <div class="flow-arr">›</div>
+    <div class="flow-c flow-green">
+      <div class="flow-n">05</div>
+      <div class="flow-icon">💰</div>
+      <div class="flow-t">USDT-выплата</div>
+      <p class="flow-d">Стейблкойн, без задержек. Прямо на ваш кошелёк — каждый месяц.</p>
     </div>
   </div>
   <div class="wvi-tbl">
