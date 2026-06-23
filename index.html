@@ -322,7 +322,6 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <a href="#calc">Мой доход</a>
     <a href="#pricing">Цены</a>
     <a href="#faq">Вопросы</a>
-    <div class="lang-sw"><span class="lang-active">RU</span><span class="lang-dim">EN</span><span class="lang-dim">KO</span></div>
   </div>
   <button class="nav-btn" onclick="location.href='https://app.wellex.io/join/boart'">Начать — $49</button>
 </nav>
@@ -332,7 +331,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="hero-text">
     <div class="h-eyebrow">Здоровье, которое платит</div>
     <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
-    <p class="h-sub">Браслет измеряет три показателя каждый день. Ваш WVI определяет долю в пуле — чем здоровее, тем выше ежемесячный доход.</p>
+    <p class="h-sub">Браслет отслеживает сон, активность и самочувствие каждый день. Чем лучше вы живёте — тем выше ваш ежемесячный доход.</p>
     <div class="h-btns">
       <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
       <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
@@ -374,7 +373,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <!-- BRIDGE -->
 <div class="bridge">
   <div class="bridge-text">Вы уже живёте.<br><span>Пора получать за это.</span></div>
-  <p class="bridge-sub">Ваша подписка $19/мес автоматически входит в USDT-пул. Wellex управляет им и каждый месяц распределяет доход между участниками — пропорционально WVI. Выше индекс здоровья — выше ваша доля в пуле.</p>
+  <p class="bridge-sub">Ваша подписка $19/мес работает на вас: Wellex инвестирует её в общий пул и каждый месяц распределяет доход между участниками. Чем лучше ваши показатели здоровья — тем выше ваша выплата.</p>
 </div>
 
 <!-- FEATURES -->
@@ -480,7 +479,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="hs">
       <div class="hs-n">Шаг 3</div>
       <div class="hs-t">Начисляется доход</div>
-      <p class="hs-d">Ваша подписка $19/мес входит в диверсифицированный USDT-пул. WVI определяет вашу долю: чем выше — тем больше начислений. Первые USDT приходят на 30-й день.</p>
+      <p class="hs-d">Подписка $19/мес работает как инвестиция в общий пул. Чем выше ваш индекс здоровья — тем больше выплата каждый месяц. Первые деньги приходят на 30-й день.</p>
     </div>
   </div>
   <div class="wvi-tbl">
@@ -575,11 +574,11 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="calc-nums">
         <div class="calc-num">
           <div class="calc-num-v" id="res-mo">—</div>
-          <div class="calc-num-l">В месяц</div>
+          <div class="calc-num-l">Ваша ставка / мес</div>
         </div>
         <div class="calc-num">
-          <div class="calc-num-v" id="res-yr">—</div>
-          <div class="calc-num-l">В год</div>
+          <div class="calc-num-v" style="color:#4ADE80">$8–24</div>
+          <div class="calc-num-l">USDT — первая когорта</div>
         </div>
       </div>
       <p class="calc-tip" id="res-tip"></p>
@@ -773,7 +772,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 </section>
 
 <footer>
-  <span>© 2026 Wellex · <a href="https://find-and-update.company-information.service.gov.uk/company/14813653" target="_blank" style="color:var(--m);text-decoration:underline;text-underline-offset:2px">Calon Wealth Management Ltd · Reg. №14813653</a> · Англия</span>
+  <span>© 2026 Wellex · Юридическое лицо: <a href="https://find-and-update.company-information.service.gov.uk/company/14813653" target="_blank" style="color:var(--m);text-decoration:underline;text-underline-offset:2px">Calon Wealth Management Ltd · Reg. №14813653 · Англия</a></span>
   <a href="https://wellex.io" target="_blank" style="color:var(--m);text-decoration:none">wellex.io</a>
   <span>Здоровье, которое приносит доход.</span>
 </footer>
@@ -820,7 +819,6 @@ function showResult() {
 
   document.getElementById('res-wvi').textContent = wvi;
   document.getElementById('res-mo').textContent = mo;
-  document.getElementById('res-yr').textContent = yr;
   document.getElementById('res-tip').textContent = tip;
 
   var aspireEl = document.getElementById('res-aspire');
