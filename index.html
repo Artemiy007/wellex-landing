@@ -293,6 +293,16 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .wd-tag-pro{color:var(--m);background:rgba(90,84,114,0.15)}
 .wd-tag-easy{color:var(--b);background:rgba(123,108,231,0.1)}
 
+/* TESTIMONIALS */
+.tst-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:48px auto 0}
+.tst-c{background:var(--s);border-radius:20px;padding:28px 24px;border:1px solid rgba(123,108,231,0.12)}
+.tst-top{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.tst-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0}
+.tst-name{font-size:14px;font-weight:600;color:var(--t);margin-bottom:4px}
+.tst-wvi{font-size:11px;font-weight:700;color:var(--b);letter-spacing:1px;text-transform:uppercase}
+.tst-q{font-size:14px;color:var(--m);line-height:1.65;margin-bottom:20px}
+.tst-income{display:inline-block;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:#4ADE80;font-size:13px;font-weight:700;padding:6px 14px;border-radius:980px}
+
 /* HONEST */
 #honest{background:var(--s)}
 .honest-g{max-width:800px;margin:48px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -315,6 +325,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .cmp-table th:nth-child(2),.cmp-table td:nth-child(2){display:none}
   .wd-g{grid-template-columns:1fr}
   .honest-g{grid-template-columns:1fr}
+  .tst-g{grid-template-columns:1fr}
   .sticky-cta.sc-show{display:flex}
   .fc{display:flex;flex-direction:row;align-items:flex-start;gap:16px;padding:20px;border-top-width:0;border-left-width:3px}
   .fc.c-sleep{border-left-color:var(--g)}
@@ -565,6 +576,50 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="stat-c">
       <div class="stat-v" style="color:#4ADE80">$13–32</div>
       <div class="stat-l">USDT в первый месяц</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="s-center">
+    <div class="s-label">Участники</div>
+    <h2 class="s-h">Первые месяцы.</h2>
+    <p class="s-sub" style="margin-bottom:0">Три истории из первой когорты.</p>
+  </div>
+  <div class="tst-g fade-up">
+    <div class="tst-c">
+      <div class="tst-top">
+        <div class="tst-av" style="background:rgba(74,222,128,0.15);color:#4ADE80">М</div>
+        <div>
+          <div class="tst-name">Михаил, 34 · Москва</div>
+          <div class="tst-wvi">WVI 73</div>
+        </div>
+      </div>
+      <p class="tst-q">"Надел ради сна — хронически не высыпался. WVI вырос с 58 до 73. Честно не ожидал что ещё и $18 придут на кошелёк. Но пришли."</p>
+      <div class="tst-income">$18 USDT</div>
+    </div>
+    <div class="tst-c">
+      <div class="tst-top">
+        <div class="tst-av" style="background:rgba(123,108,231,0.15);color:#7B6CE7">А</div>
+        <div>
+          <div class="tst-name">Алина · Санкт-Петербург</div>
+          <div class="tst-wvi">WVI 82</div>
+        </div>
+      </div>
+      <p class="tst-q">"Занимаюсь йогой, слежу за режимом — WVI сразу вышел на 82. $28 USDT пришло. Для меня это было скорее подтверждением что система работает. Уже советую двум подругам."</p>
+      <div class="tst-income">$28 USDT</div>
+    </div>
+    <div class="tst-c">
+      <div class="tst-top">
+        <div class="tst-av" style="background:rgba(255,140,105,0.15);color:#FF8C69">Д</div>
+        <div>
+          <div class="tst-name">Д. · Екатеринбург</div>
+          <div class="tst-wvi">WVI 61</div>
+        </div>
+      </div>
+      <p class="tst-q">"Казалось — очередная крипто-история. Оказалось иначе. $10 немного, WVI 61. Но браслет такое показал по восстановлению, что на пару недель забыл про деньги."</p>
+      <div class="tst-income">$10 USDT</div>
     </div>
   </div>
 </section>
