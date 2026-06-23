@@ -85,7 +85,7 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 .s-sub{font-size:19px;font-weight:300;color:var(--m);max-width:600px;margin:0 auto 56px;line-height:1.5}
 
 /* FEATURE CARDS */
-.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto}
+.fg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1120px;margin:0 auto}
 .fc{background:var(--bg);border-radius:20px;padding:40px 32px;transition:transform 0.2s;border:1px solid transparent;border-top-width:3px}
 .fc:hover{transform:translateY(-4px)}
 .fc.c-sleep{border-top-color:var(--g)}
@@ -179,7 +179,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .h-btns{justify-content:center}
   .hero-right{width:100%;display:flex;justify-content:center}
   .hero-device{width:100%;max-width:320px}
-  .fg{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr 1fr}
   .how-g{grid-template-columns:1fr}
   .pr-g{grid-template-columns:1fr}
   .calc-opts{grid-template-columns:1fr}
@@ -229,11 +229,9 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 /* WVI TABLE */
 .wvi-tbl{max-width:560px;margin:40px auto 0;display:flex;flex-direction:column;gap:6px}
 .wvi-row{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-radius:12px;background:var(--s);border-left:3px solid rgba(90,84,114,0.3)}
-.wvi-row:nth-child(3){border-left-color:rgba(123,108,231,0.35)}
-.wvi-row:nth-child(4){border-left-color:rgba(123,108,231,0.55)}
-.wvi-row:nth-child(5){border-left-color:rgba(123,108,231,0.75)}
-.wvi-row:nth-child(6){border-left-color:var(--b)}
-.wvi-row:nth-child(7){border-left-color:var(--g);border-left-width:4px}
+.wvi-row:nth-child(2){border-left-color:rgba(123,108,231,0.4)}
+.wvi-row:nth-child(3){border-left-color:var(--b)}
+.wvi-row:nth-child(4){border-left-color:var(--g);border-left-width:4px}
 .wvi-rng{font-size:14px;font-weight:500;color:var(--m)}
 .wvi-rt{font-size:15px;font-weight:700;color:var(--t)}
 .wvi-rt.wvi-hi{color:var(--b)}
@@ -380,27 +378,33 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 <section class="section" id="f">
   <div class="s-center">
     <div class="s-label">Что считается</div>
-    <h2 class="s-h">Три показателя.<br>Один доход.</h2>
-    <p class="s-sub">Браслет считывает три параметра каждый день. Чем они лучше — тем выше ваш WVI и тем выше ежемесячный доход.</p>
+    <h2 class="s-h">Четыре показателя.<br>Один доход.</h2>
+    <p class="s-sub">Браслет отслеживает четыре параметра каждый день. Чем они лучше — тем выше ваш WVI и тем выше ежемесячный доход.</p>
   </div>
   <div class="fg fade-up">
     <div class="fc c-sleep">
       <div class="fc-icon fi-g">🌙</div>
+      <div class="fc-t">Сон</div>
+      <div class="fc-pct">25% в WVI</div>
+      <p class="fc-d">Длительность, непрерывность и архитектура сна. Браслет отслеживает все фазы ночью — без вашего участия.</p>
+    </div>
+    <div class="fc c-em">
+      <div class="fc-icon fi-p">❤️</div>
       <div class="fc-t">Восстановление</div>
-      <div class="fc-pct">35% в WVI</div>
-      <p class="fc-d">Глубина сна, фазы, ритм и эффективность отдыха. Браслет знает, насколько хорошо вы восстановились — точнее, чем вы сами.</p>
+      <div class="fc-pct">40% в WVI</div>
+      <p class="fc-d">HRV, пульс в покое, нервная система. Самый весомый показатель — именно он определяет вашу готовность к дню.</p>
     </div>
     <div class="fc c-act">
       <div class="fc-icon fi-o">⚡</div>
       <div class="fc-t">Активность</div>
-      <div class="fc-pct">30% в WVI</div>
-      <p class="fc-d">Шаги, тренировки, нагрузка в течение дня. Не усреднённая норма — ваш личный ритм и прогресс.</p>
+      <div class="fc-pct">20% в WVI</div>
+      <p class="fc-d">Шаги, тренировки, нагрузка в течение дня — по вашему личному ритму, не по усреднённой норме.</p>
     </div>
-    <div class="fc c-em">
+    <div class="fc c-em" style="border-top-color:rgba(123,108,231,0.5)">
       <div class="fc-icon fi-p">💜</div>
       <div class="fc-t">Состояние</div>
-      <div class="fc-pct">35% в WVI</div>
-      <p class="fc-d">Уровень стресса, концентрация и баланс. Браслет считывает 18 эмоциональных маркеров автоматически — без ручного ввода.</p>
+      <div class="fc-pct">15% в WVI</div>
+      <p class="fc-d">Стресс, концентрация и эмоциональный фон. Браслет считывает 18 маркеров автоматически — без ручного ввода.</p>
     </div>
   </div>
 </section>
@@ -463,34 +467,31 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="s-center">
     <div class="s-label">Принцип</div>
     <h2 class="s-h">Как это<br>работает</h2>
-    <p class="s-sub" style="margin-bottom:0">От трёх показателей — к реальному доходу.</p>
+    <p class="s-sub" style="margin-bottom:0">От четырёх показателей — к реальному доходу.</p>
   </div>
   <div class="how-g fade-up">
     <div class="hs">
       <div class="hs-n">Шаг 1</div>
-      <div class="hs-t">Браслет считывает три параметра</div>
-      <p class="hs-d">Каждый день и ночь отслеживается восстановление, физическая активность и эмоциональное состояние. Без вашего участия — просто наденьте и живите.</p>
+      <div class="hs-t">Браслет считывает четыре показателя</div>
+      <p class="hs-d">Каждые сутки отслеживаются сон, восстановление, физическая активность и эмоциональное состояние. Без вашего участия — просто наденьте и живите.</p>
     </div>
     <div class="hs">
       <div class="hs-n">Шаг 2</div>
       <div class="hs-t">Рассчитывается ваш WVI</div>
-      <p class="hs-d">WVI — индекс жизненной силы от 0 до 100. Складывается из трёх параметров: восстановление, активность и эмоциональное состояние. Обновляется каждое утро.</p>
+      <p class="hs-d">WVI — индекс жизненной силы от 0 до 100. Четыре показателя: восстановление (40%), сон (25%), активность (20%), состояние (15%). Обновляется каждое утро.</p>
     </div>
     <div class="hs">
       <div class="hs-n">Шаг 3</div>
       <div class="hs-t">Начисляется доход</div>
-      <p class="hs-d">Подписка $19/мес работает как инвестиция в общий пул. Чем выше ваш индекс здоровья — тем больше выплата каждый месяц. Выплаты ежемесячные — как обычная подписка, только деньги идут вам.</p>
+      <p class="hs-d">С первого дня носки ваш результат уже учитывается. Подписка $19/мес работает в общем пуле: арбитраж DEX, DeFi-ликвидность, алгоритмические стратегии. Чем выше WVI — тем больше ваша доля. Выплата — в конце каждого месяца.</p>
     </div>
   </div>
   <div class="wvi-tbl">
-    <div class="wvi-row"><span class="wvi-rng">WVI 0 – 39</span><span class="wvi-rt">1% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 40 – 49</span><span class="wvi-rt">2% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 50 – 59</span><span class="wvi-rt">5% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 60 – 69</span><span class="wvi-rt">8% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 70 – 79</span><span class="wvi-rt wvi-hi">12% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 80 – 89</span><span class="wvi-rt wvi-hi">16% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 90 – 100</span><span class="wvi-rt wvi-max">20% / мес</span></div>
-    <p class="wvi-caption">Официальные ставки Wellex на USDT-пул · доходность может варьироваться · <a href="#results" style="color:var(--b);text-decoration:none">Первые участники получили $8–24 ↓</a></p>
+    <div class="wvi-row"><span class="wvi-rng">WVI &lt; 40 · Пауза</span><span class="wvi-rt">1% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 40 – 64 · Сниженная</span><span class="wvi-rt">2–5% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 65 – 79 · Стандартная</span><span class="wvi-rt wvi-hi">5–8% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI ≥ 80 · Максимальная</span><span class="wvi-rt wvi-max">до 20% / мес</span></div>
+    <p class="wvi-caption">Четыре официальных тира Wellex · диапазон 0–20% · <a href="#results" style="color:var(--b);text-decoration:none">Первые участники получили $8–24 ↓</a></p>
   </div>
 </section>
 
@@ -751,7 +752,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </details>
     <details>
       <summary>Как я зарабатываю, просто нося браслет?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Подписки участников ($19/мес) образуют общий инвестиционный пул. Wellex управляет им и каждый месяц распределяет полученный доход. Ваш индекс здоровья определяет вашу долю: чем лучше живёте — тем больше получаете. Никаких своих токенов, ничего синтетического — только реальная доходность и реальные выплаты.</p>
+      <p class="faq-body">Ваша подписка $19/мес входит в общий пул. Wellex направляет его в три инструмента: арбитраж на децентрализованных биржах (DEX), предоставление ликвидности в DeFi-протоколах и алгоритмическую торговлю (800+ стратегий, обновление каждые 15 минут). Доход от пула делится между участниками пропорционально WVI. Никаких своих токенов, ничего синтетического — только реальные выплаты в USDT.</p>
     </details>
     <details>
       <summary>Что будет после 2 месяцев?<span class="faq-icon">+</span></summary>
@@ -793,27 +794,23 @@ function pick(btn) {
 
 function showResult() {
   var score = ans.sleep + ans.act + ans.em;
-  var wvi, mo, yr, tip, aspire;
+  var wvi, mo, tip, aspire;
 
   if (score <= 4) {
-    wvi = '20–35'; mo = '1%'; yr = '12%';
-    tip = 'WVI пока низкий — но доход уже идёт. Улучшите сон на 1 час и добавьте немного движения — WVI вырастет, ставка поднимется.';
-    aspire = '→ Большинство новых участников вырастают на +18 пт WVI за первый месяц. Браслет помогает туда добраться.';
+    wvi = '20–39'; mo = '1%';
+    tip = 'WVI ниже активного порога — но доход уже идёт. Улучшите сон на 1 час и добавьте немного движения: WVI пробьёт 40 и ставка вырастет.';
+    aspire = '→ Большинство новых участников вырастают на +18 пт WVI за первый месяц. Браслет покажет, что именно менять.';
   } else if (score <= 6) {
-    wvi = '40–55'; mo = '2–5%'; yr = '24–60%';
-    tip = 'Средний WVI — хороший старт. Добавьте 2 000 шагов в день и следите за качеством сна: WVI и выплата заметно вырастут.';
-    aspire = '→ При WVI 90+ ставка: 20%/мес. Средний рост за первый месяц — +18 пт.';
+    wvi = '40–64'; mo = '2–5%';
+    tip = 'Сниженный тир — хороший старт. Добавьте 2 000 шагов и следите за режимом сна: WVI выйдет на стандартный тир.';
+    aspire = '→ Ещё +15–25 пт WVI — и ставка переходит в стандартный тир (5–8%). Первый месяц обычно даёт +18 пт.';
   } else if (score <= 8) {
-    wvi = '60–75'; mo = '8–12%'; yr = '96–144%';
-    tip = 'Хорошие показатели. Поработайте над режимом сна и эмоциональным состоянием — WVI выйдет на следующий уровень.';
-    aspire = '→ Ещё 15–30 пт — и ставка выйдет на 16–20%/мес. Первый месяц обычно даёт +18 пт.';
-  } else if (score <= 10) {
-    wvi = '76–87'; mo = '12–16%'; yr = '144–192%';
-    tip = 'Вы уже в верхней части шкалы. Небольшие улучшения сна и активности — и WVI выйдет на максимум.';
-    aspire = '→ До максимальной ставки 20%/мес — совсем близко. Браслет покажет точно, что улучшить.';
+    wvi = '65–79'; mo = '5–8%';
+    tip = 'Стандартный тир. Поработайте над качеством сна и восстановлением — WVI перейдёт в максимальный тир.';
+    aspire = '→ Ещё 5–15 пт — и ставка выйдет на максимальный тир (до 20%/мес). Браслет покажет точно, что улучшить.';
   } else {
-    wvi = '88–100'; mo = '16–20%'; yr = '192–240%';
-    tip = 'Отличные показатели по всем трём параметрам. Вы в зоне максимальных начислений Wellex.';
+    wvi = '80–100'; mo = 'до 20%';
+    tip = 'Максимальный тир. Ваши показатели по всем четырём параметрам в зоне лучших начислений Wellex.';
     aspire = null;
   }
 
