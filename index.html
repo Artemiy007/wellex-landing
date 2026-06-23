@@ -354,6 +354,30 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .honest-t{font-size:14px;font-weight:600;color:var(--t);margin-bottom:5px}
 .honest-d{font-size:13px;color:var(--m);line-height:1.55}
 
+/* BAND */
+#band{padding:100px 80px;background:var(--bg)}
+.band-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.band-card-wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
+.band-card{position:relative;width:100%;aspect-ratio:1/1;border-radius:2.25rem;border:1px solid rgba(255,255,255,0.08);overflow:hidden;background:linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.016));box-shadow:0 40px 100px -30px rgba(0,0,0,0.55),inset 0 1px 0 rgba(255,255,255,0.05)}
+.band-glow-t{position:absolute;inset-inline:3rem;top:2.5rem;height:11rem;border-radius:50%;filter:blur(3rem);transition:background-color 0.5s;pointer-events:none;z-index:1}
+.band-glow-b{position:absolute;inset-inline:4rem;bottom:2.5rem;height:7rem;border-radius:50%;filter:blur(3rem);transition:background-color 0.5s;pointer-events:none;z-index:1}
+.band-inner-border{position:absolute;inset:12px;border-radius:1.85rem;border:1px solid rgba(255,255,255,0.06);pointer-events:none;z-index:3}
+.band-badge{position:absolute;top:1.25rem;right:1.25rem;z-index:4;border-radius:9999px;border:1px solid;padding:6px 12px;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;backdrop-filter:blur(12px);transition:border-color 0.5s,background-color 0.5s;color:var(--t)}
+.band-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.band-swatches{display:flex;gap:12px;justify-content:center}
+.band-swatch{width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center;background:transparent;padding:0}
+.band-swatch-ring{position:absolute;width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,0.8);opacity:0;transition:opacity 0.2s}
+.band-swatch.active .band-swatch-ring{opacity:1}
+.band-swatch-dot{width:32px;height:32px;border-radius:50%;display:block;transition:transform 0.2s;flex-shrink:0}
+.band-swatch:hover .band-swatch-dot{transform:scale(1.1)}
+.band-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;color:var(--t);line-height:1.25;letter-spacing:-0.02em;margin-bottom:16px}
+.band-p{font-size:14px;line-height:1.75;font-weight:500;color:rgba(255,255,255,0.55);margin-bottom:20px}
+.band-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.band-tag{font-size:12px;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.04);border-radius:9999px;padding:6px 12px}
+.band-info{border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);padding:20px 24px}
+.band-info h3{font-size:14px;font-weight:500;color:var(--t);margin-bottom:6px}
+.band-info p{font-size:13px;line-height:1.65;font-weight:500;color:rgba(255,255,255,0.55);margin:0}
+
 /* STICKY CTA */
 .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,8,20,0.96);backdrop-filter:saturate(180%) blur(20px);padding:12px 20px;border-top:1px solid rgba(123,108,231,0.2);z-index:99;align-items:center;justify-content:space-between;gap:12px}
 .sc-t{font-size:13px;color:var(--m);line-height:1.4}
@@ -378,6 +402,9 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .fc-t{font-size:16px;margin-bottom:3px}
   .fc-d{font-size:13px}
   .lang-sw{display:none}
+  #band{padding:60px 20px}
+  .band-inner{grid-template-columns:1fr;gap:32px}
+  .band-card{max-width:400px;margin:0 auto;width:100%}
 }
 </style>
 </head>
@@ -477,6 +504,72 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="bridge-text">Вы уже живёте.<br><span>Пора получать за это.</span></div>
   <p class="bridge-sub">Один ежедневный WVI. Реальный доход в USDT из мульти-чейн стейкинг-пула. Чем выше WVI — тем выше ваша доля. Никаких токенов. Никогда.</p>
 </div>
+
+<!-- BAND -->
+<section id="band">
+  <div class="band-inner">
+    <div class="band-card-wrap">
+      <div class="band-card">
+        <div class="band-glow-t" id="band-glow-t"></div>
+        <div class="band-glow-b" id="band-glow-b"></div>
+        <div class="band-inner-border"></div>
+        <div class="band-badge" id="band-badge">Surge</div>
+        <video class="band-video" id="band-video" autoplay loop muted playsinline
+          poster="https://wellex.io/images/bands/orange-3d.png"
+          aria-label="Браслет Wellex">
+          <source id="band-src-webm" src="https://wellex.io/videos/bands/orange.webm" type="video/webm">
+          <source id="band-src-mp4" src="https://wellex.io/videos/bands/orange.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="band-swatches">
+        <button class="band-swatch active" aria-label="Signal Orange"
+          data-color-r="232" data-color-g="114" data-color-b="58"
+          data-webm="https://wellex.io/videos/bands/orange.webm"
+          data-mp4="https://wellex.io/videos/bands/orange.mp4"
+          data-poster="https://wellex.io/images/bands/orange-3d.png"
+          data-label="Surge" onclick="switchBand(this)">
+          <span class="band-swatch-ring"></span>
+          <span class="band-swatch-dot" style="background:#E8723A"></span>
+        </button>
+        <button class="band-swatch" aria-label="Void Black"
+          data-color-r="80" data-color-g="75" data-color-b="120"
+          data-mp4="https://wellex.io/videos/bands/black-water.mp4"
+          data-poster="https://wellex.io/images/bands/black-water-poster.png"
+          data-label="Void Black" onclick="switchBand(this)">
+          <span class="band-swatch-ring"></span>
+          <span class="band-swatch-dot" style="background:#2A2A2A"></span>
+        </button>
+        <button class="band-swatch" aria-label="Sand / Beige"
+          data-color-r="212" data-color-g="188" data-color-b="156"
+          data-poster="https://wellex.io/images/bands/orange-band-v9.png"
+          data-label="Sand" onclick="switchBand(this)">
+          <span class="band-swatch-ring"></span>
+          <span class="band-swatch-dot" style="background:#D4BC9C"></span>
+        </button>
+        <button class="band-swatch" aria-label="Dark Mocha"
+          data-color-r="139" data-color-g="94" data-color-b="60"
+          data-poster="https://wellex.io/images/bands/brown-band-v9.png"
+          data-label="Dark Mocha" onclick="switchBand(this)">
+          <span class="band-swatch-ring"></span>
+          <span class="band-swatch-dot" style="background:#8B5E3C"></span>
+        </button>
+      </div>
+    </div>
+    <div class="band-text">
+      <h2 class="band-h">Носишь, а не следишь.<br>Один чёткий ориентир — каждый день.</h2>
+      <p class="band-p">Тканый ремешок встречается с прецизионной пластиной из сплава, внутри которой — непрерывные оптические сенсоры. Каждая деталь создана так, чтобы раствориться на запястье, пока технология под ней считывает самые важные сигналы твоего тела.</p>
+      <div class="band-tags">
+        <span class="band-tag">Непрерывное оптическое считывание</span>
+        <span class="band-tag">HRV, сон и восстановление</span>
+        <span class="band-tag">Один показатель готовности в день</span>
+      </div>
+      <div class="band-info">
+        <h3>Вдохновлён настоящим браслетом</h3>
+        <p>Тканое полотно, матовый сплав и чёрные направляющие, фиксирующие сенсорный модуль. Материалы выбраны не только ради эстетики — но и для комфорта при длительном ношении и чистоты сигнала.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FEATURES -->
 <section class="section" id="f">
@@ -1052,6 +1145,48 @@ function showResult() {
   el.classList.add('visible');
   setTimeout(function() { el.scrollIntoView({behavior: 'smooth', block: 'nearest'}); }, 150);
 }
+
+// Band color switcher
+function switchBand(btn) {
+  document.querySelectorAll('.band-swatch').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  var r = btn.dataset.colorR, g = btn.dataset.colorG, b = btn.dataset.colorB;
+  var glowT = 'rgba('+r+','+g+','+b+',0.25)';
+  var glowB = 'rgba('+r+','+g+','+b+',0.165)';
+  document.getElementById('band-glow-t').style.backgroundColor = glowT;
+  document.getElementById('band-glow-b').style.backgroundColor = glowB;
+  var badge = document.getElementById('band-badge');
+  badge.textContent = btn.dataset.label || '';
+  badge.style.borderColor = 'rgba('+r+','+g+','+b+',0.44)';
+  badge.style.backgroundColor = 'rgba('+r+','+g+','+b+',0.1)';
+  var video = document.getElementById('band-video');
+  var webm = btn.dataset.webm || '';
+  var mp4 = btn.dataset.mp4 || '';
+  var poster = btn.dataset.poster || '';
+  if (poster) video.poster = poster;
+  var srcWebm = document.getElementById('band-src-webm');
+  var srcMp4 = document.getElementById('band-src-mp4');
+  if (webm || mp4) {
+    video.pause();
+    if (srcWebm) srcWebm.src = webm;
+    if (srcMp4) srcMp4.src = mp4;
+    video.load();
+    video.play().catch(function(){});
+  } else {
+    video.pause();
+    if (srcWebm) srcWebm.src = '';
+    if (srcMp4) srcMp4.src = '';
+    video.load();
+  }
+}
+(function(){
+  var gt = document.getElementById('band-glow-t');
+  var gb = document.getElementById('band-glow-b');
+  var badge = document.getElementById('band-badge');
+  if (gt) gt.style.backgroundColor = 'rgba(232,114,58,0.25)';
+  if (gb) gb.style.backgroundColor = 'rgba(232,114,58,0.165)';
+  if (badge) { badge.style.borderColor = 'rgba(232,114,58,0.44)'; badge.style.backgroundColor = 'rgba(232,114,58,0.1)'; }
+})();
 
 // Fade-up on scroll
 var fadeObserver = new IntersectionObserver(function(entries) {
