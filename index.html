@@ -140,13 +140,16 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 /* PRICING */
 #pricing{background:var(--s);padding:80px 40px}
 .pr-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:48px auto 0}
-.pc{background:var(--bg);border-radius:20px;padding:0 40px 40px;text-align:center;border:2px solid transparent;transition:border-color 0.3s;overflow:visible;position:relative}
+.pc{background:var(--bg);border-radius:20px;padding:32px;text-align:center;border:1px solid rgba(255,255,255,0.08);transition:border-color 0.3s;position:relative}
 .pc.m{border-color:var(--b)}
-.pc-img-wrap{margin:-120px auto 32px;height:220px;display:flex;align-items:flex-end;justify-content:center}
-.pc-img{width:220px;height:220px;object-fit:contain;filter:drop-shadow(0 24px 48px rgba(0,0,0,0.4));display:block}
-.pc-l{font-size:11px;font-weight:700;color:var(--m);margin-bottom:16px;letter-spacing:1.5px;text-transform:uppercase}
-.pc-a{font-size:72px;font-weight:700;letter-spacing:-3px;line-height:0.85;margin-bottom:4px}
+.pc-img-wrap{height:192px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.pc-img{width:auto;height:192px;object-fit:contain;filter:drop-shadow(0 16px 32px rgba(0,0,0,0.3));display:block}
+.pc-l{font-size:11px;font-weight:600;color:var(--m);margin-bottom:12px;letter-spacing:1.5px;text-transform:uppercase}
+.pc-a{font-size:56px;font-weight:700;letter-spacing:-2px;line-height:1;margin-bottom:2px;display:flex;align-items:baseline;justify-content:center;gap:10px}
+.pc-a-sub{font-size:14px;font-weight:400;letter-spacing:0;color:var(--m)}
 .pc.m .pc-a{color:var(--t)}
+.pc-year{font-size:13px;color:var(--m);margin-bottom:16px}
+.pc-desc{font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.5}
 .pc-p{font-size:13px;color:var(--m);margin-bottom:28px}
 .pc-ls{text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
 .pi{display:flex;gap:10px;font-size:15px;color:var(--t)}
@@ -192,8 +195,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .hero-device{width:100%;max-width:320px}
   .fg{grid-template-columns:1fr}
   .how-g{grid-template-columns:1fr}
-  .pr-g{grid-template-columns:1fr;margin-top:100px}
-  .pc-img-wrap{margin:-70px auto 20px}
+  .pr-g{grid-template-columns:1fr}
   .calc-opts{grid-template-columns:1fr}
   .calc-nums{grid-template-columns:1fr}
   .after-g{grid-template-columns:1fr;gap:32px}
@@ -717,37 +719,42 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <h2 class="s-h">Выберите пакет.</h2>
     <p class="s-sub">Браслет включён. Первый WVI — на 8-й день.</p>
   </div>
-  <div class="pr-g fade-up" style="margin-top:140px">
+  <div class="pr-g fade-up">
     <div class="pc m">
       <div class="pc-img-wrap">
-        <img class="pc-img" src="https://wellex.io/images/bands/orange-band-v9.png" alt="Браслет Wellex" loading="lazy">
+        <img class="pc-img" src="https://wellex.io/images/bands/brown-band-v9.png" alt="Браслет Wellex Wellness Member" loading="lazy">
       </div>
-      <div class="pc-l">Стартовый</div>
-      <div class="pc-a">$49</div>
-      <div class="pc-p">Разово · Браслет включён · $19/мес после 2 месяцев</div>
+      <div class="pc-l">Wellness Member</div>
+      <div class="pc-a">$49 <span class="pc-a-sub">2 мес. включено</span></div>
+      <div class="pc-year">$228 / год · $19/мес при оплате ежегодно</div>
+      <div class="pc-desc">Для личного велнеса. Один браслет, полное приложение, ежедневный балл.</div>
       <div class="pc-ls">
-        <div class="pi">Браслет Wellex</div>
-        <div class="pi">2 месяца подписки</div>
-        <div class="pi">Персональный ИИ-коучинг 24/7</div>
-        <div class="pi">Ежемесячные начисления в USDT</div>
-        <div class="pi">Доход зависит от вашего WVI</div>
+        <div class="pi">Браслет Wellex включён</div>
+        <div class="pi">Ежедневный WVI (0–100)</div>
+        <div class="pi">Полное приложение Wellex</div>
+        <div class="pi">ИИ-коучинг и персональные рекомендации</div>
+        <div class="pi">Сон, HRV, восстановление</div>
+        <div class="pi">Доступ к Wellex Yield (стейкинг)</div>
+        <div class="pi">2 месяца подписки включено</div>
       </div>
-      <button class="pc-btn" onclick="goRef()">Получить браслет</button>
-      <div class="pc-killer">Отмена подписки — в любой момент</div>
+      <button class="pc-btn" onclick="goRef()">Получить Wellex</button>
+      <div class="pc-killer">Отмена — в любой момент</div>
     </div>
     <div class="pc">
       <div class="pc-img-wrap">
         <img class="pc-img" src="https://wellex.io/images/bands/orange-band-v9.png" alt="Браслет Wellex Partner" loading="lazy">
       </div>
-      <div class="pc-l">Партнёр</div>
-      <div class="pc-a">$99</div>
-      <div class="pc-p">Разово · Всё из стартового + сеть · $19/мес после 2 месяцев</div>
+      <div class="pc-l">Wellex Partner</div>
+      <div class="pc-a">$99 <span class="pc-a-sub">2 мес. включено</span></div>
+      <div class="pc-year">$228 / год · $19/мес при оплате ежегодно</div>
+      <div class="pc-desc">Велнес-бизнес. Всё из Wellness Member + партнёрские инструменты.</div>
       <div class="pc-ls">
-        <div class="pi">Всё из стартового пакета</div>
-        <div class="pi">Реферальный доход (по желанию)</div>
-        <div class="pi">Командный бонус (опционально)</div>
-        <div class="pi">Ранговые выплаты</div>
-        <div class="pi">Программа лояльности</div>
+        <div class="pi">Всё из Wellness Member</div>
+        <div class="pi">Партнёрский дашборд и реф-ссылка</div>
+        <div class="pi">Командный аналитика</div>
+        <div class="pi">Инструменты роста</div>
+        <div class="pi">2 месяца подписки включено</div>
+        <div class="pi">Приоритетная поддержка</div>
       </div>
       <button class="pc-btn" onclick="goRef()">Стать партнёром</button>
       <div class="pc-killer">Зарабатываете от WVI и от команды</div>
