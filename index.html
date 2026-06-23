@@ -23,7 +23,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0A0814;--s:#1A1528;--t:#EDEAF5;--m:#5A5472;--b:#7B6CE7;--bh:#6B5CE7;--g:#4ADE80;--o:#FF8C69}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--t);font-family:'Inter',system-ui,sans-serif;font-weight:400;overflow-x:hidden}
+body{background:var(--bg);color:var(--t);font-family:'Inter',system-ui,sans-serif;font-weight:400;overflow-x:hidden;max-width:100vw}
 
 /* NAV */
 nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(123,108,231,0.15);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:52px;z-index:100}
@@ -179,7 +179,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   .h-btns{justify-content:center}
   .hero-right{width:100%;display:flex;justify-content:center}
   .hero-device{width:100%;max-width:320px}
-  .fg{grid-template-columns:1fr 1fr}
+  .fg{grid-template-columns:1fr}
   .how-g{grid-template-columns:1fr}
   .pr-g{grid-template-columns:1fr}
   .calc-opts{grid-template-columns:1fr}
@@ -229,9 +229,12 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 /* WVI TABLE */
 .wvi-tbl{max-width:560px;margin:40px auto 0;display:flex;flex-direction:column;gap:6px}
 .wvi-row{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-radius:12px;background:var(--s);border-left:3px solid rgba(90,84,114,0.3)}
-.wvi-row:nth-child(2){border-left-color:rgba(123,108,231,0.4)}
-.wvi-row:nth-child(3){border-left-color:var(--b)}
-.wvi-row:nth-child(4){border-left-color:var(--g);border-left-width:4px}
+.wvi-row:nth-child(2){border-left-color:rgba(123,108,231,0.25)}
+.wvi-row:nth-child(3){border-left-color:rgba(123,108,231,0.45)}
+.wvi-row:nth-child(4){border-left-color:rgba(123,108,231,0.65)}
+.wvi-row:nth-child(5){border-left-color:var(--b)}
+.wvi-row:nth-child(6){border-left-color:rgba(74,222,128,0.65)}
+.wvi-row:nth-child(7){border-left-color:var(--g);border-left-width:4px}
 .wvi-rng{font-size:14px;font-weight:500;color:var(--m)}
 .wvi-rt{font-size:15px;font-weight:700;color:var(--t)}
 .wvi-rt.wvi-hi{color:var(--b)}
@@ -329,12 +332,12 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="hero-text">
     <div class="h-eyebrow">Здоровье, которое платит</div>
     <h1>Живи лучше —<br>зарабатывай<br>больше.</h1>
-    <p class="h-sub">Браслет отслеживает сон, восстановление, активность и самочувствие. Чем лучше вы живёте — тем выше ваш ежемесячный доход.</p>
+    <p class="h-sub">Браслет отслеживает 4 параметра каждый день и формирует ваш индекс — <strong style="color:var(--b)">WVI</strong>. Чем он выше — тем выше ваш ежемесячный доход в USDT.</p>
     <div class="h-btns">
       <button class="btn-blue" onclick="location.href='https://app.wellex.io/join/boart'">Получить браслет — $49</button>
       <button class="btn-ghost" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Узнать мой доход ›</button>
     </div>
-    <div class="h-disclaimer">Браслет включён в стоимость · IP68 водонепроницаем · Отмена в любой момент</div>
+    <div class="h-disclaimer">IP68 · 14 дней без зарядки · Отмена в любой момент</div>
   </div>
   <div class="hero-right">
     <div class="hero-device">
@@ -365,13 +368,14 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
   <div class="ts-item"><div class="ts-v">$49</div><div class="ts-l">Разовый вход</div></div>
   <div class="ts-item"><div class="ts-v">14 дней</div><div class="ts-l">Без зарядки</div></div>
   <div class="ts-item"><div class="ts-v" style="color:#4ADE80">$8–24</div><div class="ts-l">USDT в первый месяц</div></div>
+  <div class="ts-item"><div class="ts-v">500+</div><div class="ts-l">Участников</div></div>
   <div class="ts-item"><div class="ts-v">Везде</div><div class="ts-l">Бесплатная доставка</div></div>
 </div>
 
 <!-- BRIDGE -->
 <div class="bridge">
   <div class="bridge-text">Вы уже живёте.<br><span>Пора получать за это.</span></div>
-  <p class="bridge-sub">Ваша подписка $19/мес работает на вас: Wellex инвестирует её в общий пул и каждый месяц распределяет доход между участниками. Чем лучше ваши показатели здоровья — тем выше ваша выплата.</p>
+  <p class="bridge-sub">Каждое утро браслет формирует ваш WVI — индекс здоровья от 0 до 100. Он определяет вашу ставку доходности в пуле Wellex: от 1% до 20% в месяц. Живёте здоровее — WVI растёт — доход растёт.</p>
 </div>
 
 <!-- FEATURES -->
@@ -483,15 +487,18 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <div class="hs">
       <div class="hs-n">Шаг 3</div>
       <div class="hs-t">Начисляется доход</div>
-      <p class="hs-d">Первые 7 дней — калибровка под ваш ритм. С 8-го дня WVI рассчитан и доход начинает начисляться. Подписка $19/мес работает в пуле: арбитраж DEX, DeFi-ликвидность, алготорговля. Чем выше WVI — тем больше ваша доля. Выплата — ежемесячно на кошелёк.</p>
+      <p class="hs-d">Первые 7 дней — калибровка под ваш ритм. С 8-го дня WVI установлен и начинает определять вашу ставку доходности (1–20%/мес). Пул работает в трёх направлениях: DEX-арбитраж, DeFi-ликвидность, алготорговля (800+ стратегий). Чем выше WVI — тем выше ваша доходность. Выплата — ежемесячно на кошелёк.</p>
     </div>
   </div>
   <div class="wvi-tbl">
-    <div class="wvi-row"><span class="wvi-rng">WVI &lt; 40 · Пауза</span><span class="wvi-rt">1% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 40 – 64 · Сниженная</span><span class="wvi-rt">2–5% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI 65 – 79 · Стандартная</span><span class="wvi-rt wvi-hi">5–8% / мес</span></div>
-    <div class="wvi-row"><span class="wvi-rng">WVI ≥ 80 · Максимальная</span><span class="wvi-rt wvi-max">до 20% / мес</span></div>
-    <p class="wvi-caption">Четыре официальных тира Wellex · диапазон 0–20% · <a href="#results" style="color:var(--b);text-decoration:none">Первые участники получили $8–24 ↓</a></p>
+    <div class="wvi-row"><span class="wvi-rng">WVI 0 – 39</span><span class="wvi-rt">1% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 40 – 49</span><span class="wvi-rt">2% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 50 – 59</span><span class="wvi-rt">5% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 60 – 69</span><span class="wvi-rt">8% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 70 – 79</span><span class="wvi-rt wvi-hi">12% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 80 – 89</span><span class="wvi-rt wvi-hi">16% / мес</span></div>
+    <div class="wvi-row"><span class="wvi-rng">WVI 90 – 100</span><span class="wvi-rt wvi-max">20% / мес</span></div>
+    <p class="wvi-caption">Ставка обновляется каждое утро · <a href="#results" style="color:var(--b);text-decoration:none">Первые участники получили $8–24 ↓</a></p>
   </div>
 </section>
 
@@ -678,8 +685,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </div>
     <div class="wd-c">
       <div class="wd-icon">🏦</div>
-      <div class="wd-t">Wise → Карта</div>
-      <p class="wd-d">Конвертируйте USDT через Wise и получайте рубли или любую валюту прямо на банковский счёт. Без крипто-опыта.</p>
+      <div class="wd-t">Bybit / OKX → Карта</div>
+      <p class="wd-d">Через P2P на Bybit или OKX переводите USDT напрямую в рубли на любую карту — без специальных знаний.</p>
       <span class="wd-tag wd-tag-easy">Без крипто</span>
     </div>
   </div>
@@ -736,7 +743,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </details>
     <details>
       <summary>Как я получаю деньги?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Wellex начисляет выплаты в USDT — цифровом долларе, привязанном 1:1 к обычному. Деньги приходят напрямую на ваш кошелёк раз в месяц. Проще всего получить через Coinbase (регистрация 5 минут) или сразу на карту через Wise — без крипто-опыта. Wellex ваши деньги не хранит, выплата идёт автоматически.</p>
+      <p class="faq-body">Wellex начисляет выплаты в USDT — цифровом долларе, привязанном 1:1 к обычному. Деньги приходят напрямую на ваш кошелёк раз в месяц. Проще всего получить через Coinbase (регистрация 5 минут) или конвертировать в рубли через Bybit/OKX P2P прямо на карту. Wellex ваши деньги не хранит — выплата идёт автоматически.</p>
     </details>
     <details>
       <summary>Что если пропустить день?<span class="faq-icon">+</span></summary>
@@ -744,15 +751,15 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     </details>
     <details>
       <summary>Нужно разбираться в крипте?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Нет. Для старта — только аккаунт Wellex. Для получения денег — Coinbase (5 минут, без опыта). Хотите рубли на карту? Конвертируете через Wise — всё понятно без технических знаний. Не интересует доход совсем? Просто используйте как трекер здоровья.</p>
+      <p class="faq-body">Нет. Для старта — только аккаунт Wellex. Для получения денег — Coinbase (5 минут, без опыта). Хотите рубли на карту? P2P через Bybit или OKX — всё понятно без технических знаний. Не интересует доход совсем? Просто используйте как трекер здоровья.</p>
     </details>
     <details>
       <summary>Я плачу только $49?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">$49 при входе — это всё, что нужно сейчас. С третьего месяца подписка $19/мес, которая и формирует ваш доход. Никаких дополнительных депозитов, токенов или скрытых взносов. Wellex инвестирует пул за вас — вы просто носите браслет.</p>
+      <p class="faq-body">$49 при входе — это всё, что нужно сейчас. Включает браслет и 2 месяца подписки. С третьего месяца — $19/мес за сервис. Никаких дополнительных депозитов, токенов или скрытых взносов. Ваш доход определяется WVI — просто носите браслет.</p>
     </details>
     <details>
       <summary>Как я зарабатываю, просто нося браслет?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Ваша подписка $19/мес входит в общий пул. Wellex направляет его в три инструмента: арбитраж на децентрализованных биржах (DEX), предоставление ликвидности в DeFi-протоколах и алгоритмическую торговлю (800+ стратегий, обновление каждые 15 минут). Доход от пула делится между участниками пропорционально WVI. Никаких своих токенов, ничего синтетического — только реальные выплаты в USDT.</p>
+      <p class="faq-body">Wellex управляет общим стейкинг-пулом в трёх направлениях: арбитраж на децентрализованных биржах (DEX), ликвидность в DeFi-протоколах и алготорговля (800+ стратегий, обновление каждые 15 минут). Ваш WVI определяет вашу ставку доходности — от 1% до 20% в месяц. Чем здоровее живёте, тем выше WVI и тем выше ваш доход. Никаких токенов — только реальные USDT напрямую на кошелёк.</p>
     </details>
     <details>
       <summary>Что будет после 2 месяцев?<span class="faq-icon">+</span></summary>
