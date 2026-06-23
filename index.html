@@ -141,11 +141,11 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 #pricing{background:var(--s);padding:80px 40px}
 .pr-g{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:820px;margin:48px auto 0}
 .pc{background:rgba(8,6,20,0.7);border-radius:24px;padding:32px;border:1px solid rgba(255,255,255,0.07);transition:border-color 0.3s;position:relative;display:flex;flex-direction:column}
-.pc.m{background:rgba(22,19,42,0.85);border-color:rgba(123,108,231,0.45)}
+.pc.m{background:rgba(20,18,42,0.88);border-color:rgba(123,108,231,0.3);box-shadow:0 40px 120px -20px rgba(123,108,231,0.45);backdrop-filter:blur(20px)}
 .pc-img-wrap{height:192px;display:flex;align-items:center;justify-content:center;margin-bottom:28px}
 .pc-img{width:auto;height:192px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5));display:block}
 .pc-l{font-size:11px;font-weight:400;color:rgba(255,255,255,0.45);margin-bottom:14px;letter-spacing:1.5px;text-transform:uppercase}
-.pc-a{font-size:52px;font-weight:700;letter-spacing:-2px;line-height:1;margin-bottom:4px;display:flex;align-items:baseline;gap:10px}
+.pc-a{font-size:56px;font-weight:700;letter-spacing:-1px;line-height:1;margin-bottom:4px;display:flex;align-items:baseline;gap:10px}
 .pc-a-sub{font-size:14px;font-weight:400;letter-spacing:0;color:rgba(255,255,255,0.45)}
 .pc-year{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px}
 .pc-desc{font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.6}
@@ -158,7 +158,7 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 .pc:not(.m) .pc-btn:hover{background:rgba(255,255,255,0.09);border-color:rgba(123,108,231,0.35)}
 .pc.m .pc-btn{background:var(--b);color:#fff;border:none}
 .pc.m .pc-btn:hover{background:var(--bh)}
-.pc-recommended{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:rgba(18,16,32,0.95);border:1px solid rgba(123,108,231,0.4);color:rgba(255,255,255,0.9);font-size:11px;font-weight:600;letter-spacing:1.5px;padding:5px 14px;border-radius:980px;white-space:nowrap;display:flex;align-items:center;gap:5px}
+.pc-recommended{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:rgba(123,108,231,0.1);border:1px solid rgba(123,108,231,0.3);color:#fff;font-family:'Courier New',monospace;font-size:10px;font-weight:600;letter-spacing:0.18em;padding:4px 16px;border-radius:980px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;box-shadow:0 0 20px rgba(123,108,231,0.3)}
 .pr-note{text-align:center;font-size:13px;color:rgba(255,255,255,0.35);margin-top:24px;line-height:1.7}
 
 /* ПОСЛЕ ЗАКАЗА */
@@ -747,7 +747,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <div class="pc-l">Wellex Partner</div>
       <div class="pc-a">$99 <span class="pc-a-sub">2 мес. включено</span></div>
       <div class="pc-year">$228 / год · $19/мес при оплате ежегодно</div>
-      <div class="pc-desc">Велнес-бизнес. Всё из Wellness Member + партнёрские инструменты.</div>
+      <div class="pc-desc">Строите велнес-бизнес. Всё из Member + партнёрские инструменты.</div>
       <div class="pc-divider"></div>
       <div class="pc-ls">
         <div class="pi"><svg class="pi-chk" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7"/></svg>Всё из Wellness Member</div>
