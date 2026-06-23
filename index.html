@@ -66,8 +66,10 @@ nav{position:sticky;top:0;background:rgba(10,8,20,0.92);backdrop-filter:saturate
 
 /* HERO — 2-column */
 #hero{min-height:100vh;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:72px;padding:80px;background:var(--bg);position:relative;overflow:hidden}
-.hero-band{position:absolute;right:-8%;top:50%;transform:translateY(-50%);height:110vh;width:auto;object-fit:contain;opacity:0.13;filter:blur(0px);pointer-events:none;z-index:0;user-select:none}
-.hero-text,.hero-right{position:relative;z-index:1}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;pointer-events:none}
+.hero-ov-b{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,20,0.95) 0%,rgba(10,8,20,0.35) 50%,transparent 100%);z-index:1;pointer-events:none}
+.hero-ov-t{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,8,20,0.55) 0%,transparent 50%);z-index:1;pointer-events:none}
+.hero-text,.hero-right{position:relative;z-index:2}
 .hero-text{flex:1;max-width:540px;text-align:left}
 .hero-right{flex:0 0 auto}
 .h-eyebrow{font-size:15px;font-weight:600;color:var(--b);margin-bottom:10px;letter-spacing:-0.2px}
@@ -421,7 +423,9 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 
 <!-- HERO -->
 <section id="hero">
-  <img class="hero-band" src="https://wellex.io/images/bands/orange-band-v9.png" alt="" aria-hidden="true">
+  <img class="hero-bg" src="https://wellex.io/images/hero-poster.jpg" alt="" aria-hidden="true">
+  <div class="hero-ov-b"></div>
+  <div class="hero-ov-t"></div>
   <div class="hero-text">
     <div class="h-eyebrow">Здоровье, которое платит</div>
     <h1>Живи лучше&nbsp;—<br>зарабатывай<br>больше.</h1>
