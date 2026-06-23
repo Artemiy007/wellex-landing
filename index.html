@@ -18,6 +18,8 @@
 <meta name="twitter:title" content="Wellex — Здоровье, которое платит">
 <meta name="twitter:description" content="Умный браслет следит за здоровьем — вы зарабатываете реальные деньги. $49 разово, браслет включён. Выплаты — ежемесячно.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237B6CE7'/><text x='16' y='23' text-anchor='middle' font-size='18' font-family='Inter,sans-serif' font-weight='700' fill='white'>W</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -875,8 +877,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 </section>
 
 <footer>
-  <span>© 2026 Wellex · Юридическое лицо: <a href="https://find-and-update.company-information.service.gov.uk/company/14813653" target="_blank" style="color:var(--m);text-decoration:underline;text-underline-offset:2px">Calon Wealth Management Ltd · Reg. №14813653 · Англия</a></span>
-  <a href="https://wellex.io" target="_blank" style="color:var(--m);text-decoration:none">wellex.io</a>
+  <span>© 2026 Wellex · Юридическое лицо: <a href="https://find-and-update.company-information.service.gov.uk/company/14813653" target="_blank" rel="noopener noreferrer" style="color:var(--m);text-decoration:underline;text-underline-offset:2px">Calon Wealth Management Ltd · Reg. №14813653 · Англия</a></span>
+  <a href="https://wellex.io" target="_blank" rel="noopener noreferrer" style="color:var(--m);text-decoration:none">wellex.io</a>
   <span>Здоровье, которое приносит доход.</span>
 </footer>
 
@@ -953,8 +955,9 @@ window.addEventListener('scroll', function() {
 
 // Sticky CTA mobile
 var heroSection = document.getElementById('hero');
-var stickyCta = document.getElementById('sticky-cta');
 window.addEventListener('scroll', function() {
+  var stickyCta = document.getElementById('sticky-cta');
+  if (!stickyCta) return;
   var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
   stickyCta.classList.toggle('sc-show', window.scrollY > heroBottom);
 }, {passive: true});
