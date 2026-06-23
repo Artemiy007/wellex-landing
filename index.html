@@ -389,6 +389,9 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .app-btn-soon{font-size:9px;letter-spacing:0.8px;text-transform:uppercase;color:rgba(255,255,255,0.45)}
 .app-btn-name{font-size:14px;font-weight:600}
 
+/* GRAIN TEXTURE */
+body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");position:fixed;inset:0}
+
 /* SECTION DIVIDER + GLOW */
 .sec-div{height:1px;background:linear-gradient(to right,transparent,rgba(123,108,231,0.5) 50%,transparent);margin:0}
 .sec-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(80% 50% at 50% 0%,rgba(123,108,231,0.10),transparent 60%);z-index:0}
