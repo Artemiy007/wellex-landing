@@ -159,6 +159,7 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 .pc.m .pc-btn:hover{background:var(--bh)}
 .pc:not(.m) .pc-btn{background:rgba(123,108,231,0.12);color:var(--t)}
 .pc-killer{font-size:12px;color:var(--b);margin-top:12px;font-weight:500}
+.pc-recommended{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--b);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 16px;border-radius:980px;white-space:nowrap}
 .pr-note{text-align:center;font-size:13px;color:var(--m);margin-top:20px;line-height:1.7}
 
 /* ПОСЛЕ ЗАКАЗА */
@@ -720,7 +721,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
     <p class="s-sub">Браслет включён. Первый WVI — на 8-й день.</p>
   </div>
   <div class="pr-g fade-up">
-    <div class="pc m">
+    <div class="pc">
       <div class="pc-img-wrap">
         <img class="pc-img" src="https://wellex.io/images/bands/brown-band-v9.png" alt="Браслет Wellex Wellness Member" loading="lazy">
       </div>
@@ -740,7 +741,8 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
       <button class="pc-btn" onclick="goRef()">Получить Wellex</button>
       <div class="pc-killer">Отмена — в любой момент</div>
     </div>
-    <div class="pc">
+    <div class="pc m">
+      <div class="pc-recommended">РЕКОМЕНДУЕМ</div>
       <div class="pc-img-wrap">
         <img class="pc-img" src="https://wellex.io/images/bands/orange-band-v9.png" alt="Браслет Wellex Partner" loading="lazy">
       </div>
