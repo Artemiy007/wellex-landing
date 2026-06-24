@@ -89,7 +89,7 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 .dev-gauge-wrap svg{width:200px;height:110px}
 .gauge-track{stroke:rgba(255,255,255,0.08)}
 .gauge-fill{stroke:var(--b);stroke-dasharray:251;stroke-dashoffset:251;animation:arcDraw 1.5s ease-out 0.5s forwards}
-@keyframes arcDraw{to{stroke-dashoffset:33}}
+@keyframes arcDraw{to{stroke-dashoffset:80}}
 .dev-score-inner{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);text-align:center;white-space:nowrap}
 .dev-score-label{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
 .dev-score{font-size:56px;font-weight:700;color:#fff;line-height:1;letter-spacing:-2px;animation:glowPulse 2.5s ease-in-out 2s infinite}
@@ -184,7 +184,7 @@ h1{font-size:clamp(44px,6vw,88px);font-weight:700;line-height:1;letter-spacing:-
 .pc-divider{height:1px;background:rgba(255,255,255,0.07);margin-bottom:20px}
 .pc-ls{text-align:left;display:flex;flex-direction:column;gap:14px;margin-bottom:28px;flex:1}
 .pi{display:flex;gap:12px;font-size:15px;color:rgba(255,255,255,0.75);align-items:flex-start;line-height:1.72}
-.pi-chk{flex-shrink:0;color:rgba(255,255,255,0.35);margin-top:1px}
+.pi-chk{flex-shrink:0;color:#4ADE80;margin-top:1px}
 .pc-btn{width:100%;padding:14px 24px;font-family:'Inter';font-size:15px;font-weight:500;cursor:pointer;border-radius:980px;transition:all 0.2s;letter-spacing:-0.2px;border:none;display:flex;align-items:center;justify-content:center;gap:8px}
 .pc:not(.m) .pc-btn{background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.12)}
 .pc:not(.m) .pc-btn:hover{background:rgba(255,255,255,0.09);border-color:rgba(123,108,231,0.35)}
@@ -531,18 +531,18 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
         </svg>
         <div class="dev-score-inner">
           <div class="dev-score-label">WVI</div>
-          <div class="dev-score">87</div>
+          <div class="dev-score">68</div>
         </div>
       </div>
-      <div class="dev-status">Отличный день</div>
+      <div class="dev-status">Хороший день</div>
       <div style="font-size:10px;color:rgba(255,255,255,0.25);text-align:center;letter-spacing:0.5px;margin-top:-14px;margin-bottom:16px">Пример · данные из приложения</div>
       <div class="dev-metrics">
-        <div class="dm"><div class="dm-l">Восстановление</div><div class="dm-v">92%</div></div>
-        <div class="dm"><div class="dm-l">Активность</div><div class="dm-v">Высокая</div></div>
+        <div class="dm"><div class="dm-l">Восстановление</div><div class="dm-v">73%</div></div>
+        <div class="dm"><div class="dm-l">Активность</div><div class="dm-v">Средняя</div></div>
         <div class="dm"><div class="dm-l">Состояние</div><div class="dm-v">Хорошо</div></div>
-        <div class="dm"><div class="dm-l">Доход/мес</div><div class="dm-v" style="color:#4ADE80">16%</div></div>
+        <div class="dm"><div class="dm-l">Доход/мес</div><div class="dm-v" style="color:#4ADE80">8%</div></div>
       </div>
-      <div class="dev-ai">«Сон улучшился на 8%. Нервная система стабильна. Ещё 2 тренировки — WVI достигнет 93. Ставка выйдет на максимум.»</div>
+      <div class="dev-ai">«Сон улучшился на 6%. Нервная система стабильна. Ещё 3 тренировки — WVI достигнет 75. Ставка вырастет.»</div>
     </div>
   </div>
 </section>
@@ -1111,8 +1111,8 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
       <p class="faq-body">Подписка на сервис — $19/мес: браслет и WVI продолжают работать. Доход от стейкинга поступает на ваш кошелёк независимо — это отдельная история. Не хотите продолжать — отменяете в один клик, браслет остаётся вашим навсегда.</p>
     </details>
     <details>
-      <summary>Когда приходят выплаты?<span class="faq-icon">+</span></summary>
-      <p class="faq-body">Первые 7 дней браслет калибруется под ваш ритм. С 8-го дня WVI рассчитан — и доход начинает начисляться ежедневно. Вывести USDT можно в любой момент — два вывода в месяц бесплатно. Не нужно ничего ждать — всё приходит напрямую на ваш кошелёк.</p>
+      <summary>Есть ли гарантия на браслет?<span class="faq-icon">+</span></summary>
+      <p class="faq-body">Да. На браслет Wellex — 12 месяцев гарантии. Если что-то пойдёт не так — замена без лишних вопросов. Подписка отменяется в любой момент одним кликом, браслет остаётся вашим навсегда.</p>
     </details>
   </div>
 </section>
