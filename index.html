@@ -364,6 +364,7 @@ footer{background:rgba(0,0,0,0.02);border-top:1px solid rgba(123,108,231,0.1);pa
 .band-inner-border{position:absolute;inset:12px;border-radius:1.85rem;border:1px solid rgba(255,255,255,0.06);pointer-events:none;z-index:3}
 .band-badge{position:absolute;top:1.25rem;right:1.25rem;z-index:4;border-radius:9999px;border:1px solid;padding:6px 12px;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;backdrop-filter:blur(12px);transition:border-color 0.5s,background-color 0.5s;color:var(--t)}
 .band-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+#band-poster-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3;pointer-events:none}
 .band-swatches{display:flex;gap:12px;justify-content:center}
 .band-swatch{width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center;background:transparent;padding:0}
 .band-swatch-ring{position:absolute;width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,0.8);opacity:0;transition:opacity 0.2s}
@@ -577,6 +578,7 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
           <source id="band-src-webm" src="https://wellex.io/videos/bands/orange.webm" type="video/webm">
           <source id="band-src-mp4" src="https://wellex.io/videos/bands/orange.mp4" type="video/mp4">
         </video>
+        <img id="band-poster-img" src="./assets/bands/orange-3d.png" alt="" aria-hidden="true">
       </div>
       <div class="band-swatches">
         <button class="band-swatch active" aria-label="Signal Orange"
@@ -1251,6 +1253,8 @@ function switchBand(btn) {
   var webm = btn.dataset.webm || '';
   var mp4 = btn.dataset.mp4 || '';
   var poster = btn.dataset.poster || '';
+  var bandImg = document.getElementById('band-poster-img');
+  if (poster && bandImg) { bandImg.src = poster; bandImg.style.display = 'block'; }
   if (poster) video.poster = poster;
   var srcWebm = document.getElementById('band-src-webm');
   var srcMp4 = document.getElementById('band-src-mp4');
@@ -1274,6 +1278,15 @@ function switchBand(btn) {
   if (gt) gt.style.backgroundColor = 'rgba(232,114,58,0.25)';
   if (gb) gb.style.backgroundColor = 'rgba(232,114,58,0.165)';
   if (badge) { badge.style.borderColor = 'rgba(232,114,58,0.44)'; badge.style.backgroundColor = 'rgba(232,114,58,0.1)'; }
+})();
+
+// Band poster: hide overlay when video plays (desktop/iOS), keep visible on Android
+(function(){
+  var bv = document.getElementById('band-video');
+  var bi = document.getElementById('band-poster-img');
+  if (bv && bi) {
+    bv.addEventListener('playing', function() { bi.style.display = 'none'; });
+  }
 })();
 
 // Fade-up on scroll
