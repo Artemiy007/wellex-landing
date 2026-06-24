@@ -480,6 +480,7 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
       <span class="logo-text">ellex</span>
     </a>
     <div class="nav-c">
+      <a href="#band">Браслет</a>
       <a href="#f">Как считается</a>
       <a href="#results">Результаты</a>
       <a href="#calc">Мой доход</a>
@@ -496,6 +497,7 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
+  <a href="#band" onclick="closeMobileMenu()">Браслет</a>
   <a href="#f" onclick="closeMobileMenu()">Как считается</a>
   <a href="#results" onclick="closeMobileMenu()">Результаты</a>
   <a href="#calc" onclick="closeMobileMenu()">Мой доход</a>
@@ -718,10 +720,10 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
           <td class="cmp-wh">$49</td>
         </tr>
         <tr>
-          <td>Браслет включён</td>
+          <td>Гаджет в подарок</td>
           <td>—</td>
           <td>—</td>
-          <td class="cmp-wh">Бесплатно</td>
+          <td class="cmp-wh">✓</td>
         </tr>
       </tbody>
     </table>
@@ -740,35 +742,35 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
   <div class="flow-wrap fade-up">
     <div class="flow-c">
       <div class="flow-n">01</div>
-      <div class="flow-icon">💳</div>
+      <div class="flow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
       <div class="flow-t">Членский взнос $49</div>
       <p class="flow-d">Браслет + 2 месяца подписки включены. $19/мес после включённого периода.</p>
     </div>
     <div class="flow-arr">›</div>
     <div class="flow-c">
       <div class="flow-n">02</div>
-      <div class="flow-icon">🔗</div>
+      <div class="flow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
       <div class="flow-t">Стейкинг в USDT</div>
       <p class="flow-d">Средства работают в сети Polygon. DEX-арбитраж, DeFi-ликвидность, алготорговля.</p>
     </div>
     <div class="flow-arr">›</div>
     <div class="flow-c">
       <div class="flow-n">03</div>
-      <div class="flow-icon">📈</div>
+      <div class="flow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
       <div class="flow-t">Генерация yield</div>
       <p class="flow-d">Прозрачный APR. 800+ стратегий, обновление каждые 15 минут.</p>
     </div>
     <div class="flow-arr">›</div>
     <div class="flow-c flow-accent">
       <div class="flow-n">04</div>
-      <div class="flow-icon">⚡</div>
+      <div class="flow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7B6CE7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
       <div class="flow-t">Множитель WVI</div>
       <p class="flow-d">Выше WVI — больше yield. Ваш индекс обновляется каждое утро по данным браслета.</p>
     </div>
     <div class="flow-arr">›</div>
     <div class="flow-c flow-green">
       <div class="flow-n">05</div>
-      <div class="flow-icon">💰</div>
+      <div class="flow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg></div>
       <div class="flow-t">USDT-выплата</div>
       <p class="flow-d">Стейблкойн, без задержек. Прямо на ваш кошелёк — каждый месяц.</p>
     </div>
@@ -1144,7 +1146,7 @@ body::after{content:"";opacity:0.025;pointer-events:none;z-index:9998;background
 <footer>
   <span>© 2026 Wellex · Юридическое лицо: <a href="https://find-and-update.company-information.service.gov.uk/company/14813653" target="_blank" rel="noopener noreferrer" style="color:var(--m);text-decoration:underline;text-underline-offset:2px">Calon Wealth Management Ltd · Reg. №14813653 · Англия</a></span>
   <a href="https://wellex.io" target="_blank" rel="noopener noreferrer" style="color:var(--m);text-decoration:none">wellex.io</a>
-  <span>Здоровье, которое приносит доход.</span>
+  <span>Здоровье, которое платит.</span>
 </footer>
 
 <script>
